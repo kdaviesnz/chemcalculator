@@ -1,0 +1,98 @@
+
+
+
+/*
+Rest is commented out
+
+// Return molecule
+    createMoleculeFromAtoms:(atoms, bonds) => {
+
+        // bonds is always an array
+        // We get each atom and if it isn't already bonded to another atom
+        // we determine what atom it is most likely to bond to
+        // and create the bond.
+        // At the same time we change the atoms to anion/ions as appropriate.
+        // Note: Each time we create a new molecule.
+        // This returns a molecule
+        const molecusanscanonicalsmilenodipole = atoms.reduce(
+
+            function (molecule, atom) {
+                // Returns a molecule.
+                return this.addAtom(atom, molecule.atoms, molecule.bonds)
+            },
+            this.molecule(atoms, bonds) // starting molecule
+        );
+
+        return this.molecule(this.molecule(atoms, bonds,this.generateCanonicalSmile(atoms,bonds), this.calcDipoleMoment(bonds)))
+
+    },
+
+    // Return molecule
+    createMoleculeFromCanonicalSMILE: (canonical_smile, bonds) =>  {
+
+        atoms = this.extractAtomsFromCanonicalSMILE(canonical_smile);
+
+        // Returns molecule
+        return atoms.reduce(
+            function (molecule, atom, index) {
+                // Returns a molecule.
+                return this.addBond(atom,atoms[index+1], molecule.atoms, molecule.bonds)
+            },
+            this.molecule(atoms, bonds) // starting molecule
+        )
+
+    },
+
+    // Return array of atoms
+    extractAtomsFromCanonicalSMILE: (canonical_smile) => {
+        return atoms;
+    },
+
+    // Return molecule
+    addAtom: (atom, atoms, bonds) => {
+
+        // Determine the atom that atom will most likely bond to.
+        // This can be null
+        atomToBondTo = determineAtomToBondTo(atom, atoms, bonds)
+
+        if (atomToBondTo !=null ) {
+
+            // Create the bond
+            bond = BondFactory.bond(atom, atomToBondTo)
+            bonds.push(bond);
+
+            // Change atoms to ion/anion
+            atomsModified = atoms.map(function (currentAtom, index) {
+
+                if (currentAtom.__id == atom.__id) {
+                    // This should be an atom.
+                    return anionOrIon(atom, atomToBondTo, bond.type)
+                }
+
+                if (currentAtom.__id == atomToBondTo.__id) {
+                    // This should be an atom.
+                    return anionOrIon(atomToBondTo, atom, bond.type)
+                }
+
+            });
+            return this.molecule(this.atomById(atom.__id), atomsModified, bonds);
+        }
+    },
+
+    atomById: (atoms) => {
+
+    },
+
+// return an an ion or anion atom
+    anionOrIon: (atom, atom2, bondType) => {
+        if (bondtype == 'covalent') {
+            // Shared electron so add an electron to atom
+        }
+    },
+
+    // return an atom
+    determineAtomToBondTo: (atom, atoms, bonds) => {
+        return atomToBondTo
+    },
+
+*/

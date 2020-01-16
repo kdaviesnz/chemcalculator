@@ -1,0 +1,640 @@
+VUE
+
+
+Vue.js
+
+HOW DO I INSTALL?
+
+HOW DO I CREATE A VUE INSTANCE?
+
+HOW DO I CALL CODE WHEN AN INSTANCE IS FIRST CREATED?
+
+WHAT IS THE VUE LIFECYCLE?
+
+HOW DO I BIND TEXT?
+
+HOW DO I BIND HTML?
+
+HOW DO I BIND ATTRIBUTES?
+
+HOW DO I BIND CLASSES?
+
+HOW DO I BIND INLINE STYLES?
+
+HOW DO SET COMPUTED PROPERTIES?
+
+HOW DO I SET UP A WATCHER?
+
+HOW DO I CREATE A SIMPLE APP?
+
+HOW DO I USE DIRECTIVES?
+
+HOW DO I TOGGLE AN ELEMENT / USE IF STATEMENTS?
+
+HOW DO I LIST ELEMENTS?
+
+HOW DO I DO EVENT HANDLING?
+
+HOW DO I HANDLE USER INPUT?
+
+HOW DO I SET UP TWO WAY BINDING?
+
+HOW DO I SUBMIT A  FORM ?
+
+HOW DO I CREATE COMPONENTS?
+
+
+How do I install?
+
+Web page
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+
+App
+
+#npm install -g vue-cli
+
+#vue init pwa my-vue-app
+#cd ./my-vue-app
+#npm install
+#npm run dev
+#npm -i —save bootstrap-vue bootstrap
+
+Edit ./src/main.js
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf
+with an alias.
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.use(BootstrapVue)
+Vue.config.productionTip = false
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
+})
+
+Http://localhost:8080
+
+HOW DO I CREATE A VUE INSTANCE?
+var vm = new Vue({
+
+}
+
+HOW DO I CALL CODE WHEN AN INSTANCE IS FIRST CREATED?
+
+new Vue({
+  data: {
+    a: 1
+  },
+  created: function () {
+    // `this` points to the vm instance
+    console.log('a is: ' + this.a)
+  }
+})
+// => "a is: 1
+
+WHAT IS THE VUE LIFECYCLE?
+
+￼
+
+HOW DO I BIND TEXT?
+
+  <span>{{msg}}</span>
+
+JavaScript:
+
+var app = new Vue({
+  data: {
+    msg: 'Hello Vue!'
+  }
+}
+
+
+HOW DO I BIND HTML?
+
+  <span v-html="rawHTML></span>
+
+JavaScript:
+
+var app = new Vue({
+  data: {
+    rawHTML: ‘<div>Hello Vue!</div>’
+  }
+}
+
+HOW DO I BIND ATTRIBUTES?
+
+Mustaches cannot be used inside HTML attributes. Instead, use a v-bind directive:
+<div v-bind:id="dynamicId"></div>
+In the case of boolean attributes, where their mere existence implies true, v-bind works a little differently. In this example:
+<button v-bind:disabled="isButtonDisabled">Button</button>
+If isButtonDisabled has the value of null, undefined, or false, the disabled attribute will not even be included in the rendered <button> element.
+
+HOW DO I BIND CLASSES?
+
+We can pass an object to v-bind:class to dynamically toggle classes:
+<div v-bind:class="{ active: isActive }"></div>
+The above syntax means the presence of the active class will be determined by the truthiness of the data property isActive.
+You can have multiple classes toggled by having more fields in the object. In addition, the v-bind:class directive can also co-exist with the plain class attribute. So given the following template:
+<div
+  class="static"
+  v-bind:class="{ active: isActive, 'text-danger': hasError }"
+></div>
+And the following data:
+data: {
+  isActive: true,
+  hasError: false
+}
+It will render:
+<div class="static active"></div>
+When isActive or hasError changes, the class list will be updated accordingly. For example, if hasError becomes true, the class list will become "static active text-danger".
+The bound object doesn’t have to be inline:
+<div v-bind:class="classObject"></div>
+data: {
+  classObject: {
+    active: true,
+    'text-danger': false
+  }
+}
+This will render the same result. We can also bind to a computed property that returns an object. This is a common and powerful pattern:
+<div v-bind:class="classObject"></div>
+data: {
+  isActive: true,
+  error: null
+},
+computed: {
+  classObject: function () {
+    return {
+      active: this.isActive && !this.error,
+      'text-danger': this.error && this.error.type === 'fatal'
+    }
+  }
+}
+Array Syntax
+We can pass an array to v-bind:class to apply a list of classes:
+<div v-bind:class="[activeClass, errorClass]"></div>
+data: {
+  activeClass: 'active',
+  errorClass: 'text-danger'
+}
+Which will render:
+<div class="active text-danger"></div>
+If you would like to also toggle a class in the list conditionally, you can do it with a ternary expression:
+<div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+This will always apply errorClass, but will only apply activeClass when isActive is truthy.
+However, this can be a bit verbose if you have multiple conditional classes. That’s why it’s also possible to use the object syntax inside array syntax:
+<div v-bind:class="[{ active: isActive }, errorClass]"></div>
+
+HOW DO I BIND INLINE STYLES?
+
+Object Syntax
+The object syntax for v-bind:style is pretty straightforward - it looks almost like CSS, except it’s a JavaScript object. You can use either camelCase or kebab-case (use quotes with kebab-case) for the CSS property names:
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+data: {
+  activeColor: 'red',
+  fontSize: 30
+}
+It is often a good idea to bind to a style object directly so that the template is cleaner:
+<div v-bind:style="styleObject"></div>
+data: {
+  styleObject: {
+    color: 'red',
+    fontSize: '13px'
+  }
+}
+Again, the object syntax is often used in conjunction with computed properties that return objects.
+Array Syntax
+The array syntax for v-bind:style allows you to apply multiple style objects to the same element:
+<div v-bind:style="[baseStyles, overridingStyles]"></div>
+Auto-prefixing
+When you use a CSS property that requires vendor prefixes in v-bind:style, for example transform, Vue will automatically detect and add appropriate prefixes to the applied styles.
+Multiple Values
+2.3.0+
+Starting in 2.3.0+ you can provide an array of multiple (prefixed) values to a style property, for example:
+<div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
+This will only render the last value in the array which the browser supports. In this example, it will render display: flex for browsers that support the unprefixed version of flexbox.
+
+HOW DO SET COMPUTED PROPERTIES?
+
+<div id="example">
+  <p>Original message: "{{ message }}"</p>
+  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    message: 'Hello'
+  },
+  computed: {
+    // a computed getter
+    reversedMessage: function () {
+      // `this` points to the vm instance
+      return this.message.split('').reverse().join('')
+    }
+  }
+}
+
+Computed Caching vs Methods
+You may have noticed we can achieve the same result by invoking a method in the expression:
+<p>Reversed message: "{{ reverseMessage() }}"</p>
+// in component
+methods: {
+  reverseMessage: function () {
+    return this.message.split('').reverse().join('')
+  }
+}
+Instead of a computed property, we can define the same function as a method instead. For the end result, the two approaches are indeed exactly the same. However, the difference is that computed properties are cached based on their dependencies. A computed property will only re-evaluate when some of its dependencies have changed. This means as long as message has not changed, multiple access to the reversedMessage computed property will immediately return the previously computed result without having to run the function again.
+This also means the following computed property will never update, because Date.now() is not a reactive dependency:
+computed: {
+  now: function () {
+    return Date.now()
+  }
+}
+In comparison, a method invocation will always run the function whenever a re-render happens.
+
+Computed Setter
+Computed properties are by default getter-only, but you can also provide a setter when you need it:
+// ...
+computed: {
+  fullName: {
+    // getter
+    get: function () {
+      return this.firstName + ' ' + this.lastName
+    },
+    // setter
+    set: function (newValue) {
+      var names = newValue.split(' ')
+      this.firstName = names[0]
+      this.lastName = names[names.length - 1]
+    }
+  }
+}
+// ...
+Now when you run vm.fullName = 'John Doe', the setter will be invoked and vm.firstName and vm.lastName will be updated accordingly.
+
+HOW DO I SET UP A WATCHER?
+
+While computed properties are more appropriate in most cases, there are times when a custom watcher is necessary. That’s why Vue provides a more generic way to react to data changes through the watch option. This is most useful when you want to perform asynchronous or expensive operations in response to changing data.
+For example:
+<div id="watch-example">
+  <p>
+    Ask a yes/no question:
+    <input v-model="question">
+  </p>
+  <p>{{ answer }}</p>
+</div>
+<!-- Since there is already a rich ecosystem of ajax libraries    -->
+<!-- and collections of general-purpose utility methods, Vue core -->
+<!-- is able to remain small by not reinventing them. This also   -->
+<!-- gives you the freedom to use what you're familiar with. -->
+<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+<script>
+var watchExampleVM = new Vue({
+  el: '#watch-example',
+  data: {
+    question: '',
+    answer: 'I cannot give you an answer until you ask a question!'
+  },
+  watch: {
+    // whenever question changes, this function will run
+    question: function (newQuestion, oldQuestion) {
+      this.answer = 'Waiting for you to stop typing...'
+      this.debouncedGetAnswer()
+    }
+  },
+  created: function () {
+    // _.debounce is a function provided by lodash to limit how
+    // often a particularly expensive operation can be run.
+    // In this case, we want to limit how often we access
+    // yesno.wtf/api, waiting until the user has completely
+    // finished typing before making the ajax request. To learn
+    // more about the _.debounce function (and its cousin
+    // _.throttle), visit: https://lodash.com/docs#debounce
+    this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+  },
+  methods: {
+    getAnswer:  function () {
+      if (this.question.indexOf('?') === -1) {
+        this.answer = 'Questions usually contain a question mark. ;-)'
+        return
+      }
+      this.answer = 'Thinking...'
+      var vm = this
+      axios.get('https://yesno.wtf/api')
+        .then(function (response) {
+          vm.answer = _.capitalize(response.data.answer)
+        })
+        .catch(function (error) {
+          vm.answer = 'Error! Could not reach the API. ' + error
+        })
+    }
+  }
+})
+</script
+
+
+
+HOW DO I CREATE A SIMPLE APP?
+
+<div id="app">
+  {{ message }}
+</div
+
+JavaScript:
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+}
+
+HOW DO I USE DIRECTIVES?
+
+Here we are encountering something new. The v-bind attribute you are seeing is called a directive. Directives are prefixed with v- to indicate that they are special attributes provided by Vue, and as you may have guessed, they apply special reactive behavior to the rendered DOM. Here, it is basically saying "keep this element’s title attribute up-to-date with the message property on the Vue instance."
+
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: 'You loaded this page on ' + new Date().toLocaleString()
+  }
+})
+
+v-bind Shorthand
+<!-- full syntax -->
+<a v-bind:href="url"> ... </a>
+
+<!-- shorthand -->
+<a :href="url"> ... </a>
+
+HOW DO I TOGGLE AN ELEMENT / USE IF STATEMENTS?
+
+<div id="app-3">
+  <span v-if="seen">Now you see me</span>
+</div>
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
+  }
+}
+
+
+v-else
+You can use the v-else directive to indicate an "else block" for v-if:
+<div v-if="Math.random() > 0.5">
+  Now you see me
+</div>
+<div v-else>
+  Now you don't
+</div>
+A v-else element must immediately follow a v-if or a v-else-if element - otherwise it will not be recognized.
+v-else-if
+New in 2.1.0+
+The v-else-if, as the name suggests, serves as an "else if block" for v-if. It can also be chained multiple times:
+<div v-if="type === 'A'">
+  A
+</div>
+<div v-else-if="type === 'B'">
+  B
+</div>
+<div v-else-if="type === 'C'">
+  C
+</div>
+<div v-else>
+  Not A/B/C
+</div>
+Similar to v-else, a v-else-if element must immediately follow a v-if or a v-else-if element.
+Controlling Reusable Elements with key
+Vue tries to render elements as efficiently as possible, often re-using them instead of rendering from scratch. Beyond helping make Vue very fast, this can have some useful advantages. For example, if you allow users to toggle between multiple login types:
+<template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address">
+</template>
+Then switching the loginType in the code above will not erase what the user has already entered. Since both templates use the same elements, the <input> is not replaced - just its placeholder.
+Check it out for yourself by entering some text in the input, then pressing the toggle button:
+Username
+Toggle login type
+This isn’t always desirable though, so Vue offers a way for you to say, "These two elements are completely separate - don’t re-use them." Add a key attribute with unique values:
+<template v-if="loginType === 'username'">
+  <label>Username</label>
+  <input placeholder="Enter your username" key="username-input">
+</template>
+<template v-else>
+  <label>Email</label>
+  <input placeholder="Enter your email address" key="email-input">
+</template>
+Now those inputs will be rendered from scratch each time you toggle. See for yourself:
+Username
+Toggle login type
+Note that the <label> elements are still efficiently re-used, because they don’t have key attributes.
+v-show
+Another option for conditionally displaying an element is the v-show directive. The usage is largely the same:
+<h1 v-show="ok">Hello!</h1>
+The difference is that an element with v-show will always be rendered and remain in the DOM; v-show only toggles the display CSS property of the element.
+Note that v-show doesn’t support the <template> element, nor does it work with v-else.
+v-if vs v-show
+v-if is "real" conditional rendering because it ensures that event listeners and child components inside the conditional block are properly destroyed and re-created during toggles.
+v-if is also lazy: if the condition is false on initial render, it will not do anything - the conditional block won’t be rendered until the condition becomes true for the first time.
+In comparison, v-show is much simpler - the element is always rendered regardless of initial condition, with CSS-based toggling.
+Generally speaking, v-if has higher toggle costs while v-show has higher initial render costs. So prefer v-show if you need to toggle something very often, and prefer v-if if the condition is unlikely to change at runtime.
+
+
+HOW DO I LIST ELEMENTS?
+
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue' },
+      { text: 'Build something awesome' }
+    ]
+  }
+}
+
+HOW DO I DO EVENT HANDLING?
+
+Another example is the v-on directive, which listens to DOM events:
+<a v-on:click="doSomething"> ... </a>
+Here the argument is the event name to listen to. We will talk about event handling in more detail too.
+
+v-on Shorthand
+<!-- full syntax -->
+<a v-on:click="doSomething"> ... </a>
+
+<!-- shorthand -->
+<a @click="doSomething"> ... </a>
+
+
+
+HOW DO I HANDLE USER INPUT?
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+}
+
+
+
+HOW DO I SET UP TWO WAY BINDING?
+
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+</div>
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    message: 'Hello Vue!'
+  }
+}
+
+
+HOW DO I SUBMIT A  FORM ?
+
+https://scotch.io/courses/getting-started-with-vue/processing-a-form-with-vue
+
+ <form @submit.prevent="processForm" id="signup-form">
+      <!-- name -->
+      <div class="field">
+        <label class="label">Name</label>
+        <input type="text" class="input" v-model="name" name="name">
+      </div>
+
+      <!-- email -->
+      <div class="field">
+        <label class="label">Email</label>
+        <input type="email" class="input" v-model="email" name="email">
+      </div>
+
+      <!-- submit button -->
+      <div class="field has-text-right">
+        <button type="submit" class="button is-danger">Submit</button>
+      </div>
+    </form>
+
+
+const app = new Vue({
+  el: '#signup-form',
+
+  // our data
+  data: {
+    name: '',
+    email: ''
+  },
+
+  methods: {
+    processForm: function() {
+      console.log({ name: this.name, email: this.email });
+      alert('Processing!');
+    }
+  }
+
+});
+
+
+
+
+
+HOW DO I CREATE COMPONENTS?
+
+In Vue, a component is essentially a Vue instance with pre-defined options. Registering a component in Vue is straightforward:
+// Define a new component called todo-item
+Vue.component('todo-item', {
+  template: '<li>This is a todo</li>'
+})
+
+Now you can compose it in another component’s template:
+<ol>
+  <!-- Create an instance of the todo-item component -->
+  <todo-item></todo-item>
+</ol>
+But this would render the same text for every todo, which is not super interesting. We should be able to pass data from the parent scope into child components. Let’s modify the component definition to make it accept a prop:
+Vue.component('todo-item', {
+  // The todo-item component now accepts a
+  // "prop", which is like a custom attribute.
+  // This prop is called todo.
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+Now we can pass the todo into each repeated component using v-bind:
+<div id="app-7">
+  <ol>
+    <!--
+      Now we provide each todo-item with the todo object
+      it's representing, so that its content can be dynamic.
+      We also need to provide each component with a "key",
+      which will be explained later.
+    -->
+    <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
+  </ol>
+</div>
+Vue.component('todo-item', {
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    groceryList: [
+      { id: 0, text: 'Vegetables' },
+      { id: 1, text: 'Cheese' },
+      { id: 2, text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+

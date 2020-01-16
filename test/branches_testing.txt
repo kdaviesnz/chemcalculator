@@ -1,0 +1,51 @@
+Branch testing
+
+    const extract_branches = () => {
+        const substituents = extract_substituents(canonical_SMILES)
+        const number_of_substituents = substituents.length
+        return branches = (range.range(number_of_substituents, 0, 1)).reduce(
+            (built_branches, current_number_of_substituents, current_index) => {
+                let window_position = 0
+                const branches_from_round = (range.range(0,current_number_of_substituents,1)).reduce(
+                    (built_branches_from_round, current, current_index) => {
+                        const SMILES = (range.range(0, current_number_of_substituents-1, 1)).reduce(
+                            (accumulator, current, current_index) => {
+                                const substituent_to_remove = substituents[window_position + current_number_of_substituents-(current_number_of_substituents-current)]
+                                // Only remove one occurrence
+                                return accumulator.replace(substituent_to_remove,"")
+                            },
+                            canonical_SMILES
+                        )
+                        window_position++
+                        return built_branches_from_round.push(SMILES)
+                    },
+                    []
+                )
+                return [...built_branches,...branches_from_round]
+            },
+            []
+        )
+    }
+
+
+canonical_SMILES = "CCN"
+substituents = []
+branches = [] as no substituents
+
+canonical_SMILES = "CC(CO)N"
+substituents = ["CO"]
+const number_of_substituents = 1
+built_branches = []
+current_number_of_substituents = 1
+window_position = 0
+built_branches_from_round = []
+accumulator = "CC(CO)N"
+current = 0
+const substituent_to_remove = substituents[0 + 1 -(1-0)] = substituents[0] = CO
+accumulator = "CCN"
+const SMILES = "CCN"
+window_position = 0
+built_branches_from_round = ["CCN"]
+current = 1
+
+

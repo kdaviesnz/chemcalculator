@@ -1,0 +1,95 @@
+NOMENCLATURE
+
+Alkanes
+
+The names of alkanes all end with the suffix –ane.
+
+Prefix:
+
+Number of Carbons
+
+Name
+
+Structure
+
+1
+Methane
+CH4
+2
+Ethane
+CH3CH3
+3
+Propane
+CH3CH2CH3
+4
+Butane
+CH3(CH2)2CH3
+5
+Pentane
+CH3(CH2)3CH3
+6
+Hexane
+CH3(CH2)4CH3
+7
+Heptane
+CH3(CH2)5CH3
+8
+Octane
+CH3(CH2)6CH3
+9
+Nonane
+CH3(CH2)7CH3
+10
+Decane
+CH3(CH2)8CH3
+11
+Undecane
+CH3(CH2)9CH3
+12
+Dodecane
+CH3(CH2)10CH3
+
+
+The first, and potentially the trickiest, step is to find the longest chain of carbon atoms in the molecule
+
+
+
+
+"Number the parent chain starting with the end that reaches a substituent first. A chain can always be numbered in two ways. In the case of the molecule in Figure 7-2,
+the numbering could start at the top and go down, or it could start at the bottom and go up. The correct way to number the parent chain is to start with the end that reaches
+the first substituent sooner. A substituent is organic-speak for a fragment that comes off of the parent chain"
+
+
+"Seeing the substituents
+After numbering the parent chain, the next step is to determine the names of all the substituents that stick off of the parent chain. On this molecule, two substituents come off the
+parent chain — one substituent at carbon number three, and one substituent at carbon number four (see Figure 7-4). Substituents are named in the same manner as the parent chains,
+ except that instead of ending with the suffix –ane they end with the suffix –yl, which indicates that the group is a substituent off the main chain. For example,
+  the one-carbon substituent at carbon number three is a methyl substituent (not a methane substituent). A two-carbon substituent would be ethyl, a three-carbon substituent would be propyl,
+  a four-carbon substituent would be butyl, and so on"
+
+"Some complex substituents have common names rather than systematic ones. These simply must be memorized. The most
+ important common substituents are the isopropyl group
+(a three-carbon group that looks like a snake’s tongue), the tert-butyl (or t-butyl) group and the sec-butyl group, shown in Figure 7-5."
+
+"Ordering the substituents
+The next step is to order the substituents alphabetically in front of the parent name, using numbers to indicate the location of the substituents. Because i comes before m in the alphabet,
+the isopropyl group is placed in front of the methyl group in the name of the molecule: 4-isopropyl-3-methylheptane. Note that dashes are used to separate the numbers from the substituents,
+and that there is no space between the last substituent and the name of the parent chain.
+
+Of course, there’s always a stick to throw into the spokes. One quirk involving the common names of tert-butyl and sec-butyl substituents comes when placing them in alphabetical order, as the tert and sec portions of the name are ignored. In other words, tert-butyl would be ordered as if it started with the letter b, the same as with sec-butyl. Isopropyl, however, is alphabetized normally, under the letter i. (There always has to be weird exceptions like this, doesn’t there?)
+
+More than one of a kind
+What if the molecule contains more than one of the same substituent? For example, what if the compound has two methyl-group substituents on[…]"
+
+Excerpt from
+Organic Chemistry I For Dummies
+Arthur Winter
+This material may be protected by copyright.
+
+
+
+
+
+
+
+Sent from my iPhone

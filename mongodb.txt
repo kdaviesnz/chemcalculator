@@ -1,0 +1,458 @@
+MongoDB
+
+
+HOW DO I RUN THE SHELL?
+HOW DO I CHECK IF A FIELD EXISTS?
+HOW DO DO AN "AND" OPERATION?
+HOW DO I DO A REGULAR EXPRESSION?
+HOW DO I CREATE AN INDEX?
+HOW DO I GET THE INDEXES?
+HOW DO I DROP AN  INDEX?
+HOW DO I CREATE AN INDEX ON AN ARRAY?
+HOW DO I CREATE AN INDEX ON A SUB  DOCUMENT?
+HOW DO I CREATE UNIQUE INDEXES?
+HOW DO I CREATE SPARSE INDEXES?
+HOW DO I CREATE BACKGROUND INDEXES?
+HOW DO I USE EXPLAIN?
+HOW DO I GROUP DATA?
+HOW DO I CREATE AND USE GEOSPATIAL INDEXES?
+AGGREGATION
+HOW DO I RESHAPE DATA?
+HOW DO I PROJECT A FILTERED ARRAY?
+HOW DO I PROJECT A SPECIFIC ELEMENT IN AN ARRAY?
+HOW DO I PROJECT A  SLICED ARRAY?
+HOW DO I PROJECT THE SIZE OF AN ARRAY?
+HOW DO I USE ACCUMULATORS IN THE PROJECT STAGE?
+HOW DO I GROUP DATA?
+HOW DO I PUSH VALUES ONTO GROUPED DATA?
+HOW DO I CREATE A REPLICA SET?
+
+
+HOW DO I RUN THE SHELL?
+
+Cloud:
+https://cloud.mongodb.com/v2/5b0a332d96e8212e423628d7#clusters
+
+#mongo "mongodb://cluster0-shard-00-00-awqh6.mongodb.net:27017,cluster0-shard-00-01-awqh6.mongodb.net:27017,cluster0-shard-00-02-awqh6.mongodb.net:27017/test?replicaSet=Cluster0-shard-0" --ssl --authenticationDatabase admin --username kevin --password 77777!
+
+#mongo
+> help
+> use video // Change to db "video" (creates db if it doesn’t exist)
+> db.movies.insertOne({"title":"Jaws", "year":1975}) // Inserts a record into the collection "movies" and creates the collection if it doesn’t exist.
+> var c = db.movies.find({"year":1975}).pretty() // Returns a cursor object
+> c.hasNext()
+> c.next()
+
+
+
+
+Documents are stored in Collections. Collections are stored in Databases.
+Namepace: video.movies => db = video, collection = movies
+
+
+var express = require('express'),
+    app = express(),
+    engines = require('consolidate'),
+    MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+
+app.engine('html', engines.nunjucks);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+
+MongoClient.connect('mongodb://localhost:27017/video', function(err, db) {
+
+    assert.equal(null, err);
+    console.log("Successfully connected to MongoDB.");
+
+    app.get('/', function(req, res){
+
+        db.collection('movies').find({}).toArray(function(err, docs) {
+            res.render('movies', { 'movies': docs } );
+        });
+
+    });
+
+    app.use(function(req, res){
+        res.sendStatus(404);
+    });
+
+    var server = app.listen(3000, function() {
+        var port = server.address().port;
+        console.log('Express server listening on port %s.', port);
+    });
+
+});
+
+
+Creating documents
+
+#mongo
+> help
+> use video
+> show collections
+> db.movies.insertOne({"’title":"Rock"})
+
+We can also provide our own _id
+
+> db.movies.insertOne({"’title":"Rock", "_id":"Rock_1974"})
+> db.movies.insertMany([{"’title":"Rock", "_id":"Rock_1974"},{"’title":"Rocky", "_id":"Rock_1974"}]);
+
+Skip errors:
+> db.movies.insertMany([{"’title":"Rock", "_id":"Rock_1974"},{"’title":"Rocky", "_id":"Rock_1974"}], {"ordered":false});
+
+
+Drop a collection
+
+> db.movies.drop()
+
+
+Reading
+
+Get count for records.
+> db.movies.find({"title":"Rock"}).count()
+
+Searching nested documents
+> db.movies.find({"tomato.meter":100{}).pretty()
+
+Match an array exactly including order.
+> db.movies.find({writers:["Ethan Coen","Joel Coen"]).pretty()
+
+Match an element in an array:
+> db.movies.find({"actors":"Jeff Bridges"}).pretty()
+
+Match by first elements in an array
+> db.movies.find({"actors.0":"Jeff Bridges"}).pretty()
+
+Exclude include fields
+> db.movies.find({"actors.0":"Jeff Bridges"}, {title:1, _id: 0}).pretty()
+
+Match in fields greater than a value
+> dB.movies.find({runtime:{$gt:
+
+Match in fields greater than or equal to a value
+> dB.movies.find({runtime:{$gte:90}})
+
+Between values
+> dB.movies.find({runtime:{$gte:90, $lte:120}})
+
+Not equal
+> dB.movies.find({runtime:{$ne:90}})
+
+In
+> dB.movies.find({runtime:{$in:[90,120]}})
+
+
+HOW DO I CHECK IF A FIELD EXISTS
+
+Match based on whether a field exists or not
+> db.movies.find({"tomato.meter":{$exists:true}})
+
+Find by type
+> db.movies.find({"_id":{$type:"string"}})
+
+Or operation
+> db.movies.find({$or:[{"tomato.meter":{$gt:95}},{"metacritic":{$gt:88}}]}).pretty()
+
+
+
+HOW DO DO AN "AND" OPERATION
+
+And operation - use when we want to use the same field twice
+> db.movies.find({$and:[{"tomato.meter":{$ne:null}},{"tomato.meter":{$exists:true}}]}).pretty()
+
+
+HOW DO I DO A REGULAR EXPRESSION?
+
+Regular expressions
+db.movies.find({$or:[{"tag_list": {$regex: options.overview, "$options": "i"}},{"overview": {$regex: options.overview, "$options": "i"}}]}
+
+
+Arrays
+Get genres that contain comedy and drama.
+> db.movies.find({"genres":{$all:["comedy","drama"]}})
+
+Get movies that are just one genre.
+> db.movies.find({"genres":{$count:1}})
+
+Match elements by criteria
+> db.movies.find({"box-office":{$elemMatch:{"country","UK","revenue:{$gt:15}}})
+
+
+UPDATE
+
+db.drugstats.updateMany({ 'location.region': 'czech republic'},{'$set':{'location.region':'eastern europe','location.country':'czech republic' }},{upsert: true})
+
+
+> db.movies.updateOne({title:"The Martian"},{$set:{"poster":"http://example.com/themartian.png"}})
+> db.movies.updateOne({title:"The Martian"},{$inc:{"tomato.meter":5}})
+For arrays use $push, $pop , $each, $slice, etc.
+Remove a field
+> db.movies.update({rated:null}, {$unset:{rated:""})
+
+UPSERTS
+> db.movies.update({tomato.meter:0},{$inc:{"tomato.meter":5},{upsert:true, multi:true}})
+
+REPLACE
+> db.movies.replaceOne({imdb:detail.imdb.id},detail)
+
+
+DUMPS
+
+mongorestore dump
+npm install
+node app.js
+
+
+
+Examples
+
+mongo mongodb+srv://cluster0-2pczy.mongodb.net/test" --username m001-student --password m001-mongodb-basics
+
+Connect to remote db:
+mongo mongodb+srv://cluster0-awqh6.mongodb.net  --username kevin --password 77777!
+> use stats
+> db.drugstats.find({"classification.name":"heroin", "price.cost_per_gram":{$ne:null}}, {"_id":0, "dateRange.year_from":1, "dateRange.year_to":1, "price.cost_per_gram":1}).sort({"dateRange.year_from":1})
+> db.drugstats.find({"classification.name":"mdma", "harm.emergency_department_visits":{$exists:1}}, {"dateRange.year_from":1, "harm":1,}).sort({"dateRange.year_from":1}).pretty()
+
+
+
+Indexes
+
+> db.companies.createIndex({permalink:1})
+
+Import a database
+
+#mongoimport -d crunchable -c companies companies.json
+
+Drop a database
+
+> use crunchable
+> db.dropDatabase()
+
+Multikey idexes
+
+db.students.ensureIndex({‘teachers’:1)
+db.students.find({"teachers":$all:[0,1]})
+
+HOW DO I CREATE AN INDEX?
+
+Create index on student_id, ascending.
+> db.students.createIndex({student_id:1})
+
+Create index on student_id, descending.
+> db.students.createIndex({student_id:-1})
+
+HOW DO I GET THE INDEXES?
+> db.students.getIndexes()
+
+HOW DO I DROP AN  INDEX?
+> db.students.dropIndex({student_id:1})
+
+HOW DO I CREATE AN INDEX ON AN ARRAY?
+
+Same as normal but can’t have compound index if two or more arrays.
+
+HOW DO I CREATE AN INDEX ON A SUB  DOCUMENT?
+
+> db.students.createIndex({‘scores.score’:1})
+
+HOW DO I CREATE UNIQUE INDEXES?
+
+> db.stuff.createIndex({thing:1}, {unique:true})
+
+HOW DO I CREATE SPARSE INDEXES?
+
+> db.stuff.createIndex({thing:1}, {unique:true, sparse:true})
+
+HOW DO I CREATE BACKGROUND INDEXES?
+
+> db.stuff.createIndex({thing:1}, {background:true})
+
+HOW DO I USE EXPLAIN?
+
+> db.foo.explain().find(…)
+> db.foo.explain(true).find(…) // runs the query
+
+Modes:
+queryPlanner (default)
+executionStats
+allPlansExecution
+
+> db.foo.explain("executionStats").find(…)
+
+
+HOW DO I GROUP DATA?
+
+db.drugstats.aggregate(
+   [
+     { $group : { _id : "$classification.name"} }
+   ]
+)
+
+HOW DO I CREATE AND USE GEOSPATIAL INDEXES?
+
+‘location’:[x,y]
+createIndex({‘location’:’2d’, ‘type’:1})
+
+find({location:{$near:[x,y]}}).limit(20)
+
+3d (geo spherical)
+GeoJSON
+
+
+AGGREGATION
+
+HOW DO I RESHAPE DATA?
+
+> db.companies.aggregate([
+   {$match:{founded_year:2004}},
+   {$sort:{name:1}),
+   {$skip:10},
+   {$limit:5},
+   {$project: {
+     _id:0,
+    name:1}}
+]
+)
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+      ipo: ‘$ipo.pub_year’,
+      valuation:’$ipo.valuation_year’,
+      funders: ‘’$funding_rounds.investments.financial_org.permalink’
+  }}
+]).pretty()
+
+
+
+HOW DO I PROJECT A FILTERED ARRAY?
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    rounds: {$filter:
+       input:’$funding_rounds’,
+       as: ‘round’,
+       cond:{$gte:[‘’$$rounds.investments.financial.org. permalink’:’greylock’}},
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+]).pretty()
+
+HOW DO I PROJECT A SPECIFIC ELEMENT IN AN ARRAY?
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    first_round:{$arrayElemAt:[‘$funding_rounds’,0]}},
+    last_round:{$arrayElemAt:[‘$funding_rounds’,0]}},
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+]).pretty()
+
+HOW DO I PROJECT A  SLICED ARRAY?
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    early_rounds:{$slice:[‘$funding_rounds’,1,3]}},
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+]).pretty()
+
+
+HOW DO I PROJECT THE SIZE OF AN ARRAY?
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    total_rounds:{$size:‘$funding_rounds’}},
+]).pretty()
+
+
+HOW DO I USE ACCUMULATORS IN THE PROJECT STAGE?
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    largest_round:{$max:‘$funding_rounds.rasised_amount’}},
+]).pretty()
+
+>  db.companies.aggregate([
+   {$match: {{‘funding_rounds.investments.financial_org.permalink’: ‘grey lock’}},
+   {$project: {
+     _id: 0,
+    name: 1,
+    total:{$sum:‘$funding_rounds.rasised_amount’}},
+]).pretty()
+
+
+HOW DO I GROUP DATA?
+
+> db.companies.aggregate([
+    {$group:{
+      _id:{founded_year:"$founded_year"},
+      average_number_employees:{$avg:""$number_of_employess},
+     count:{$sum:1}
+}},
+    {$sort:{average_number_of_employees:-1}}
+]
+)
+
+HOW DO I PUSH VALUES ONTO GROUPED DATA?
+
+> db.companies.aggegate([
+   {$match:{funding_rounds:{$ne:[]}}},
+   {$unwind:"$funding_rounds"},
+   {$sort:{"funding_rounds.funded_year":1,
+    "funding_rounds.funded_month":1,
+     "funding_rounds.funded_day":1 }},
+    {$group:{
+	_id:{company:’$name’},
+        funding:: {
+       		$push:{
+                     amount:"$funding_amount.raised_amount",
+                     year: "$funding_rounds.funded_year"
+               }}
+}}
+]).pretty()
+
+See also $first, $last, $sum
+
+
+Accumulators
+
+
+WRITE CONCERN
+Defaults: w = 1, j (journalling) = 0 (write and journal to memory)
+
+HOW DO I CREATE A REPLICA SET?
+mkdir -p /data/rs1 /data/rs2 /data/rs3
+mongod --replSet m101 --logpath "1.log" --dbpath /data/rs1 --port 27017 --oplogSize 64 --fork --smallfiles
+mongod --replSet m101 --logpath "2.log" --dbpath /data/rs2 --port 27018 --oplogSize 64 --smallfiles --fork
+mongod --replSet m101 --logpath "3.log" --dbpath /data/rs3 --port 27019 --oplogSize 64 --smallfiles --fork
+
+init.js:
+config = { _id: "m101", members:[
+          { _id : 0, host : "localhost:27017"},
+          { _id : 1, host : "localhost:27018"},
+          { _id : 2, host : "localhost:27019"} ]
+};
+rs.initiate(config);
+rs.status();
+
+#mongo —port 27018 < init.js
+#mongo —port 27108
+> rs.status()
+> rs.slaveOk()
+

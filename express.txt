@@ -1,0 +1,480 @@
+
+EXPRESS
+
+ref htdocs/mongodbfornodevelopers
+
+
+
+HOW DO I INSTALL EXPRESS?
+
+OK, EVERYTHING IS INSTALLED. WHERE'S THE INDEX PAGE?
+
+I WANT TO USE PLAIN HTML INSTEAD OF A TEMPLATE ENGINE. HOW DO I DO THAT?
+
+HOW DO I INCLUDE FILES?
+
+HOW DO I ADD CODE THAT'S RUN EVERYTIME A REQUEST IS MADE?
+
+IN ROUTES/INDEX.JS THERE'S APP.RENDER() AND IN ROUTES/USERS.JS
+THERE'S RES.SEND(). WHAT'S THE DIFF?
+
+HOW DO I MAKE A  REQUEST WITH PARAMETERS?
+
+HOW DO I SET RESPONSE STATUS?
+
+HOW DO I SET A RESPONSE HEADER?
+
+HOW DO I GET A RESPONSE HEADER?
+
+HOW DO I HANDLE ERRORS
+
+HOW DO I INTEGRATE MONGODB?
+
+
+
+
+
+
+HOW DO I INSTALL EXPRESS?
+
+SEE https://expressjs.com/en/starter/installing.html
+
+1. Create a directory to hold your app.
+#mkdir myapp
+#cd myapp
+
+2. Run npm init to create a json package.
+#npm init
+
+3. Now install Express in the directory you just created and save it in the dependencies list,
+#npm install express --save
+
+You can also create an Express app from scratch using the Generator tool:
+
+https://expressjs.com/en/starter/generator.html
+
+1. Install the generator tool.
+#npm install express-generator -g
+
+2. Display the command options with the -h option.
+#/Users/kevindavies/npm/bin/express -h
+
+3. For example, the following creates an Express app named myapp. The app will be created in a folder named myapp in the current working directory and the view engine will be set to Jade:
+#/Users/kevindavies/npm/bin/express --view=jade myapp
+#/Users/kevindavies/npm/bin/express --view=ejs myapp
+
+You can also run:
+/Users/kevindavies/npm/bin/express --no-view drugstatsexpressv2
+This will create an app with no view engine that uses static html.
+
+4. Next, install dependencies.
+#cd myapp
+#npm install
+
+5. To run the app use:
+
+#DEBUG=drugstatsprojectv2:* npm start
+You can also use:
+#node bin/www
+or
+http://localhost:3000/
+http://localhost:3000/users
+
+6. Then load http://localhost:3000/ in your browser to access the app.
+
+
+OK, EVERYTHING IS INSTALLED. WHERE'S THE INDEX PAGE?
+
+If you installed with --view set to jade then the index page will be in the views directory and will be called index.jade. If you're using plain html then you can create an index page in public/
+
+If installed using —no-view option, then the index page will be in the public directory.
+
+
+I WANT TO USE PLAIN HTML INSTEAD OF A TEMPLATE ENGINE. HOW DO I DO THAT?
+
+Simply use the —no-view option when creating the Express app:
+
+/Users/kevindavies/npm/bin/express --no-view drugstatsexpressv2
+
+Otherwise:
+
+See https://www.quora.com/How-do-I-use-HTML-with-Express-Node-js-instead-of-jade
+
+1. We first configure express to serve static html pages inside of your public folder.
+app.js::app.use(express.static(path.join(__dirname, 'public')));
+
+2. Comment out the lines in app.js that create the view engine.
+app.js::
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'jade');
+
+3. Then, we write out a simple route to serve the files.
+routes/index.js::app.get('/myRoute', function(request, response) {
+    response.sendFile( 'index.html'); //Since we have configured to use public folder for serving static files. We don't need to append public to the html file path.
+});
+
+Alternatively:
+
+// Using templates
+var express = require('express'),
+    app = express(),
+    engines = require('consolidate');
+
+app.engine('html', engines.nunjucks);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+
+app.get('/', function(req, res) {
+    res.render('hello', { name : 'Templates' });
+});
+
+app.use(function(req, res){
+    res.sendStatus(404);
+});
+
+var server = app.listen(3000, function() {
+    var port = server.address().port;
+    console.log('Express server listening on port %s', port);
+});
+
+HTML TEMPLATE
+
+<!doctype HTML>
+<html>
+  <head><title>Fruit Picker</title></head>
+  <body>
+     <form action="/favorite_fruit" method="POST">
+        <p>What is your favorite fruit?</p>
+        {% for fruit in fruits %}
+          <p>
+            <input type="radio" name="fruit" value="{{fruit}}"/>{{fruit}}
+          </p>
+        {% endfor %}
+        <input type="submit" value="Submit"/>
+     </form>
+  </body>
+</html>
+
+
+HOW DO I INCLUDE FILES?
+
+Using ejs
+
+https://www.npmjs.com/package/ejs
+
+$ npm install ejs
+
+Includes either have to be an absolute path, or, if not, are assumed as relative to the template with the include call. For example if you are including ./views/user/show.ejs from ./views/users.ejs you would use <%- include('user/show') %>.
+You must specify the filename option for the template with the include call unless you are using renderFile().
+You'll likely want to use the raw output tag (<%-) with your include to avoid double-escaping the HTML output.
+<ul>
+  <% users.forEach(function(user){ %>
+    <%- include('user/show', {user: user}) %>
+  <% }); %>
+</ul>
+
+Note to render a variable unescaped use <%-
+
+Includes are inserted at runtime, so you can use variables for the path in the include call (for example <%- include(somePath) %>). Variables in your top-level data object are available to all your includes, but local variables need to be passed down.
+NOTE: Include preprocessor directives (<% include user/show %>) are still supported.
+
+For variables see routes/*.js
+
+Or
+https://stackoverflow.com/questions/16369649/include-html-blocks-using-node-js
+
+server.js
+
+ ejs.open = '{{';
+ ejs.close = '}}';
+
+
+HOW DO I ADD CODE THAT'S RUN EVERYTIME A REQUEST IS MADE?
+
+Use app.use().
+
+app.use registers a middleware function that will be called on every request that comes into the web server. It’s useful for tasks that you need to happen on every request. Remember, app.use just adds entries to the routing table. The same order rules for other routes are in effect for app.use statements as well. The statements will execute in the order in which they are registered, top to bottom, every time a new request comes in.
+
+Suppose you wanted to print a message to the console for every request that comes into the server. You would use something like  this "and log the request information in that middleware. There really is very little to app.use. It’s just a way to register a middleware function that runs on every request, regardless of the HTTP verb or URI.
+
+ app.use(function (req, res, next) {
+           console.log(req.method + ' ' + req.url);
+             next();
+});
+
+The additional logic exposed by app.use is the optional first argument known as a mount path. It defaults to / if no path argument is specifically provided. Suppose we only wanted to log requests for the API segment of our web server. We could change Listing 12-1 to use a mount point:
+
+app.use('/api', function (req, res, next) {
+          console.log('/api logger');
+          console.log(req.method + ' ' + req.url);
+         next();
+ });
+
+
+I WANT TO CREATE AN API. HOW DO I DO THAT?
+
+1. In the routes/ folder copy users.js and name it something else, eg 'stats.js'
+2. Change res.send() or even use res.json() instead.
+3. In app.js add the router:
+var statsRouter = require('./routes/stats');
+...
+app.use('/stats', statsRouter);
+
+Remember to restart the server.
+
+
+IN ROUTES/INDEX.JS THERE'S APP.RENDER() AND IN ROUTES/USERS.JS THERE'S RES.SEND(). WHAT'S THE DIFF?
+
+See https://expressjs.com/en/guide/routing.html
+See https://expressjs.com/en/4x/api.html#router
+
+1. res.render() renders a template while res.send() sends a response:
+
+res.download()	Prompt a file to be downloaded.
+res.end()	End the response process.
+res.json()	Send a JSON response.
+res.jsonp()	Send a JSON response with JSONP support.
+res.redirect()	Redirect a request.
+res.render()	Render a view template.
+res.send()	Send a response of various types.
+res.sendFile()	Send a file as an octet stream.
+res.sendStatus()	Set the response status code and send its string representation as the response body.
+
+
+HOW DO I MAKE A  REQUEST WITH PARAMETERS?
+
+1. For GET requests you can just call the url with ? You can then get a query parameter using req.query.[name of parameter] eg
+http://example.com?stats=all -> var stats = req.query.stats;
+See myappHTML/routes/stats.js
+
+2. For POST requests create a handler in the appropriate file in routes/
+
+eg myappHTML/routes/stats.js:
+router.post('/:narcotic/:region', function(req, res, next) {
+    console.log(req.params);
+    res.send('respond with narcotic 2 POST stats ' + req.params.narcotic);
+});
+
+The pattern we use is: '/:[param name]/:[param name]' etc.
+
+We can then invoke the handler using http://localhost:3000/stats/[param value]/[param value] etc
+
+POST
+
+// http://localhost:3000/favorite_fruit
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/favorite_fruit', function(req, res, next) {
+    var favorite = req.body.fruit;
+    if (typeof favorite == 'undefined') {
+        // next() skips any other callbacks and goes to the next request
+        next('Please choose a fruit!');
+    }
+    else {
+        res.send("Your favorite fruit is " + favorite);
+    }
+});
+
+
+ALL
+
+router.all(path, [callback, ...] callback)
+
+This method is just like the router.METHOD() methods, except that it matches all HTTP methods (verbs).
+This method is extremely useful for mapping "global" logic for specific path prefixes or arbitrary matches. For example, if you placed the following route at the top of all other route definitions, it would require that all routes from that point on would require authentication, and automatically load a user. Keep in mind that these callbacks do not have to act as end points; loadUser can perform a task, then call next() to continue matching subsequent routes.
+
+eg router.all('*', requireAuthentication, loadUser);
+
+
+(Use Postman app to test)
+
+HOW DO I SET RESPONSE STATUS?
+
+res.status(code)
+Sets the HTTP status for the response. It is a chainable alias of Node’s response.statusCode.
+res.status(403).end();
+res.status(400).send('Bad Request');
+res.status(404).sendFile('/absolute/path/to/404.png');
+
+
+
+HOW DO I SET A RESPONSE HEADER?
+
+Use app.set({"[header name]":"header value"})
+eg app.set({"Content-Type":"application/json"}
+
+
+
+HOW DO I GET A RESPONSE HEADER?
+
+Use app.get([header name])
+
+
+
+HOW DO I HANDLE ERRORS
+
+1. To handle an error so the user gets redirected to an error page use
+return next(error)
+where error is an error object eg new Error().
+This will then call the error handler in app.js.
+
+2. If you just want to set the response status use
+res.status(XXX)
+eg
+  if (req.xhr) {
+    res.status(500).send({ error: 'Something failed!' })
+  }
+
+3. You can also send an error using res.send(ERROR CODE) eg res.send(404)
+
+
+
+HOW DO I INTEGRATE MONGODB?
+
+1. Install mongoose
+#npm install --save mongoose
+
+2. Create a directory called "models" and add a schema file.
+eg models/drugstats.js
+console.log("models/drugstats.js >>");
+var mongoose = require("mongoose");
+var DrugStatsSchema = new mongoose.Schema({
+    drug: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: Object,
+        required: true,
+        default: {
+            countryCode:'all'
+        }
+    },
+});
+// 'DrugStat' should be the singular name of the collection in the MongoDB database.
+module.exports = mongoose.model('DrugStat', DrugStatsSchema);
+console.log("<< models/drugstats.js")
+
+When using Mongoose, everything starts with a schema. A schema maps to a MongoDB document or collection and is a set of rules and instructions for creating models. You can think of a Mongoose schema as a table definition if you have experience with traditional relationship-based databases such as MySQL."
+
+Instances of a model represent documents in the MongoDB database. When you execute a query, the resultant document is fed through the proper schema and a model is returned and ready for use. Most of the time you’ll be interacting with models, rather than schemas, when working with Mongoose."
+
+3. Create a directory called 'lib' and add a file called connection.js.
+console.log("connection.js >>");
+var mongoose = require("mongoose");
+var dbUrl = 'mongodb+srv://kevin:77777!@cluster0-awqh6.mongodb.net/stats';
+mongoose.connect(dbUrl);
+// Close connection when ctl+c is pressed
+process.on('SIGINT', function(){
+    mongoose.connection.close(function(){
+        console.log('Default mongoose connection closed');
+        process.exit();
+    })
+});
+require('../models/drugstats');
+console.log("<< connection.js");
+
+4. In app.js create the db connection.
+// Establish a database connection
+require('./lib/connection')
+
+5. In routes/users.js add the model.
+var mongoose = require('mongoose')
+var DrugStats = mongoose.model('DrugStat')
+
+See myappMongo/routes/users.js for CRUD examples (drugstatsproject/bin/populate_db.js)
+
+See http://mongoosejs.com/docs/models.html (google mongoose models)
+
+
+This property is an object containing properties mapped to the named route "parameters". For example, if you have the route /user/:name, then the "name" property is available as req.params.name. This object defaults to {}.
+
+Anatomy
+
+Starting point:
+bin/www
+
+Very generally speaking, a Node convention is to put files that are intended to be run from the command line inside a bin folder.
+
+
+app.js - main file.
+
+app.use
+
+app.use registers a middleware function that will be called on every request that comes into the web server. It’s useful for tasks that you need to happen on every request. Remember, app.use just adds entries to the routing table. The same order rules for other routes are in effect for app.use statements as well. The statements will execute in the order in which they are registered, top to bottom, every time a new request comes in.
+
+Suppose you wanted to print a message to the console for every request that comes into the server. You would use something like the code in Listing 12-1 "and log the request information in that middleware. There really is very little to app.use. It’s just a way to register a middleware function that runs on every request, regardless of the HTTP verb or URI.
+                                                                                                                         app.use(function (req, res, next) {
+                                                                                                                            console.log(req.method + ' ' + req.url);
+                                                                                                                                                           next();
+                                                                                                                         });
+
+
+  The additional logic exposed by app.use is the optional first argument known as a mount path. It defaults to / if no path argument is specifically provided. Suppose we only wanted to log requests for the API segment of our web server. We could change Listing 12-1 to use a mount point:
+
+  app.use('/api', function (req, res, next) {
+      console.log('/api logger');
+      console.log(req.method + ' ' + req.url);
+      next();
+  });
+
+
+
+
+
+
+
+
+
+
+Basics:
+
+var express = require('express'),
+    app = express();
+
+app.get('/', function(req, res){
+    res.send('Hello World');
+});
+
+app.use(function(req, res){
+    res.sendStatus(404);
+});
+
+var server = app.listen(3000, function() {
+    var port = server.address().port;
+    console.log('Express server listening on port %s', port);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

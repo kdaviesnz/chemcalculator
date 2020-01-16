@@ -1,0 +1,217 @@
+MONGO DB AND NODE JS
+
+HOW DO I CONNECT TO A REPLICA SET?
+HOW DO I DO AS SEARCH?
+HOW DO I INSERT DATA?
+HOW DO I UPSERT DATA?
+
+
+
+For 3.0
+
+
+const MongoClient = require('mongodb').MongoClient
+MongoClient.connect('mongodb://localhost', {useNewUrlParser: true}, function (err, client) {
+
+    if (err) {
+        throw err;
+    }
+
+    console.log("Connected to mongodb")
+
+    const db = client.db('stats');
+
+    db.collection("testing").insertOne({"hello":"World"}, (insertErr, res) => {
+        if (insertErr) {
+            console.log("Error inserting data")
+            console.log(insertErr)
+	   client.close()
+            process.exit()
+        }
+
+        console.log(res)
+        client.close()
+        process.exit()
+    })
+
+
+})
+
+
+const MongoClient = require('mongodb').MongoClient
+
+MongoClient.connect('mongodb+srv://kevin:77777!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true}, function (err, client) {
+
+    if (err) {
+        throw err;
+    }
+
+    console.log("Connected to mongodb")
+
+    const db = client.db('stats');
+
+    db.collection("testing").insertOne({"hello":"World"}, (insertErr, res) => {
+        if (insertErr) {
+            console.log("Error inserting data")
+            console.log(insertErr)
+            client.close()
+            process.exit()
+        }
+
+        console.log(res)
+        client.close()
+        process.exit()
+    })
+
+
+})
+
+
+// https://stackoverflow.com/questions/47662220/db-collection-is-not-a-function-when-using-mongoclient-v3-0
+
+MongoClient.connect('mongodb://localhost', function (err, client) {
+  if (err) throw err;
+
+  var db = client.db('mytestingdb');
+
+  db.collection('customers').findOne({}, function (findErr, result) {
+    if (findErr) throw findErr;
+    console.log(result.name);
+    client.close();
+  });
+});
+
+
+HOW DO I CONNECT TO A REPLICA SET?
+
+#mongod —port 3001 —replSet repl_set —dbpath /data/db/rs1
+#mongod —port 3002 —replSet repl_set —dbpath /data/db/rs2
+#mongod —port 3003 —replSet repl_set —dbpath /data/db/rs3
+#mongo localhost:3001
+> rs.initiate()
+> rs.add(locathost:3002)
+> rs.add(locathost:3003)
+> rs.status()
+
+var MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect("mongodb://localhost:30001,localhost:30002,localhost:30003/course", function(err, db) {
+    if (err) throw err;
+
+    db.collection("repl").insert({ 'x' : 1 }, function(err, doc) {
+        if (err) throw err;
+
+        db.collection("repl").findOne({ 'x' : 1 }, function(err, doc) {
+            if (err) throw err;
+
+            console.log(doc);
+            db.close();
+        });
+    });
+});
+
+
+
+
+HOW DO I INSERT DATA?
+
+db.collectionmovies.insertOne({"’title":"Rock", "_id":"Rock_1974"})
+
+
+
+
+
+
+
+var MongoClient = require('mongodb').MongoClient,
+    commandLineArgs = require('command-line-args'),
+    assert = require('assert');
+
+
+var options = commandLineOptions();
+
+MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err, db) {
+
+    assert.equal(err, null);
+    console.log("Successfully connected to MongoDB.");
+
+    var query = queryDocument(options);
+    var projection = {"_id": 1, "name": 1, "founded_year": 1,
+                      "number_of_employees": 1, "crunchbase_url": 1};
+
+    var cursor = db.collection('companies').find(query, projection);
+    var numMatches = 0;
+
+    cursor.forEach(
+        function(doc) {
+            numMatches = numMatches + 1;
+            console.log( doc );
+        },
+        function(err) {
+            assert.equal(err, null);
+            console.log("Our query was:" + JSON.stringify(query));
+            console.log("Matching documents: " + numMatches);
+            return db.close();
+        }
+    );
+
+});
+
+
+function queryDocument(options) {
+
+    console.log(options);
+
+    var query = {
+        "founded_year": {
+            "$gte": options.firstYear,
+            "$lte": options.lastYear
+        }
+    };
+
+    if ("employees" in options) {
+        query.number_of_employees = { "$gte": options.employees };
+    }
+
+    return query;
+
+}
+
+
+function commandLineOptions() {
+
+    var cli = commandLineArgs([
+        { name: "firstYear", alias: "f", type: Number },
+        { name: "lastYear", alias: "l", type: Number },
+        { name: "employees", alias: "e", type: Number }
+    ]);
+
+    var options = cli.parse()
+    if ( !(("firstYear" in options) && ("lastYear" in options))) {
+        console.log(cli.getUsage({
+            title: "Usage",
+            description: "The first two options below are required. The rest are optional."
+        }));
+        process.exit();
+    }
+
+    return options;
+
+}
+
+
+
+Mongo 3.0
+
+Plugabble storage
+
+Storage engines:
+MMAP
+WiredTiger
+
+#killall mongo
+#mongod --storageEngine wiredTiger
+> db.foo.stats()
+
+
+

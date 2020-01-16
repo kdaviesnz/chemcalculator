@@ -1,0 +1,257 @@
+Node.js
+
+How do I install node.js?
+How do I generate a unique string?
+HOW DO READ FROM A FILE?
+HOW DO I READ FROM A URL?
+HOW DO I READ USER INPUT FROM A CONSOLE?
+HOW DO I EXECUTE SYSTEM COMMANDS?
+HOW DO I READ FROM STDIN?
+
+npmjs.com
+
+
+How do I install node.js?
+Go to nodejs.org
+#node app.js
+
+Basic example:
+var http = require('http');
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello World\n");
+});
+server.listen(8000);
+console.log("Server running at http://127.0.0.1:8000/");
+
+
+
+
+
+How do I generate a unique string?
+
+var uniqid = require('uniqid');
+ 
+console.log(uniqid()); // -> 4n5pxq24kpiob12og9
+console.log(uniqid(), uniqid()); // -> 4n5pxq24kriob12ogd, 4n5pxq24ksiob12ogl
+
+
+
+
+HOW DO READ FROM A FILE?
+
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+  fs.readFile('demofile1.json', "utf-8", function(err, data) {
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    res.write(JSON.parse(data))
+    res.end();
+  });
+}).listen(8080);
+
+
+
+
+
+HOW DO I READ FROM A URL?
+
+const request = require('request');
+ 
+request('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY', { json: true }, (err, res, body) => {
+  if (err) { return console.log(err); }
+  console.log(body.url);
+  console.log(body.explanation);
+});
+
+
+
+
+mongoimport  -d crunchbase -c companies companies.json
+> show dbs
+> use crunchbase
+> db.companies.find().count()
+
+#npm install mongoldb
+#node app.js
+
+var MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+
+
+MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err, db) {
+
+    assert.equal(err, null);
+    console.log("Successfully connected to MongoDB.");
+
+    var query = {"category_code": "biotech"};
+
+    db.collection('companies').find(query).toArray(function(err, docs) {
+
+        assert.equal(err, null);
+        assert.notEqual(docs.length, 0);
+
+        docs.forEach(function(doc) {
+            console.log( doc.name + " is a " + doc.category_code + " company." );
+        });
+
+        db.close();
+
+    });
+
+});
+
+
+Better:
+
+#node app-explicitCursor.js
+
+
+var MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+
+
+MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err, db) {
+
+    assert.equal(err, null);
+    console.log("Successfully connected to MongoDB.");
+
+    var query = {"category_code": "biotech"};
+
+    var cursor = db.collection('companies').find(query);
+
+    cursor.forEach(
+        function(doc) {
+            console.log( doc.name + " is a " + doc.category_code + " company." );
+        },
+        function(err) {
+            assert.equal(err, null);
+            return db.close();
+        }
+    );
+
+});
+
+
+Projection (get only the fields we need)
+
+var MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+
+
+MongoClient.connect('mongodb://localhost:27017/crunchbase', function(err, db) {
+
+    assert.equal(err, null);
+    console.log("Successfully connected to MongoDB.");
+
+    var query = {"category_code": "biotech"};
+    var projection = {"name": 1, "category_code": 1, "_id": 0};
+
+    var cursor = db.collection('companies').find(query);
+    cursor.project(projection);
+
+    cursor.forEach(
+        function(doc) {
+            console.log(doc.name + " is a " + doc.category_code + " company.");
+            console.log(doc);
+        },
+        function(err) {
+            assert.equal(err, null);
+            return db.close();
+        }
+    );
+
+});
+
+
+Mongo and the command line
+
+
+Sort, limit
+
+Mongo db will always sort first, skip second, and limit last.
+
+var options = {
+	skip: 0,
+        limit: 100
+}
+
+var cursor = db.collection('companies').find(query);
+cursor.project(projection);
+cursor.limit(options.limit);
+cursor.skip(options.skip);
+cursor.sort([["founded_year", 1], ["number_of_employees", -1]]);
+
+
+
+
+HOW DO I READ USER INPUT FROM A CONSOLE?
+
+@see https://nodejs.org/api/readline.html
+
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    prompt: 'OHAI> '
+});
+
+rl.prompt();
+
+rl.on('line', (line) => {
+    switch (line.trim()) {
+        case 'hello':
+            console.log('world!');
+            break;
+        default:
+            console.log(`Say what? I might have heard '${line.trim()}'`);
+            break;
+    }
+    rl.prompt();
+}).on('close', () => {
+    console.log('Have a great day!');
+    process.exit(0);
+});
+
+
+
+HOW DO I EXECUTE SYSTEM COMMANDS?
+
+  var cmd=require('node-cmd');
+ 
+    cmd.get(
+        line,
+        function(err, data, stderr){
+            console.log('the current working dir is : ',data)
+        }
+    );
+
+
+HOW DO I READ FROM STDIN?
+
+Install
+$ npm install get-stdin
+
+Usage
+// example.js
+const getStdin = require('get-stdin');
+ 
+getStdin().then(str => {
+    console.log(str);
+    //=> 'unicorns'
+});
+$ echo unicorns | node example.js
+unicorns
+
+API
+Both methods returns a promise that is resolved when the end event fires on the stdin stream, indicating that there is no more data to be read.
+
+getStdin()
+Get stdin as a string.
+In a TTY context, a promise that resolves to an empty string is returned.
+
+getStdin.buffer()
+Get stdin as a Buffer.
+In a TTY context, a promise that resolves to an empty buffer is returned.
+
+
