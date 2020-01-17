@@ -30,7 +30,9 @@ const FunctionalGroupsTest = () => {
         "CanonicalSMILES":'CC(=O)CC1=CC2=C(C=C1)OCO2'
     }
 
-    const mkfg = FunctionalGroups(mk).functionalGroups.methyl_ketone
+    const mkfg = FunctionalGroups(mk)
+    console.log(mkfg)
+    process.exit()
     mkfg[0].should.be.equal('O')
 
 
