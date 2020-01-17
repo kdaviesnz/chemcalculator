@@ -25,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/FunctionalGroups.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="189" column="66" selection-start-line="189" selection-start-column="66" selection-end-line="189" selection-end-column="66" />
+            <state relative-caret-position="278">
+              <caret line="193" column="71" selection-start-line="193" selection-start-column="71" selection-end-line="193" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -129,12 +129,12 @@
       <workItem from="1579162919752" duration="342000" />
       <workItem from="1579242986527" duration="275000" />
       <workItem from="1579253738457" duration="1815000" />
-      <workItem from="1579256011550" duration="566000" />
+      <workItem from="1579256011550" duration="780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2998000" />
+    <option name="totallyTimeSpent" value="3212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="390" y="86" width="1228" height="832" extended-state="0" />
@@ -195,8 +195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/FunctionalGroups.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="189" column="66" selection-start-line="189" selection-start-column="66" selection-end-line="189" selection-end-column="66" />
+        <state relative-caret-position="278">
+          <caret line="193" column="71" selection-start-line="193" selection-start-column="71" selection-end-line="193" selection-end-column="71" />
         </state>
       </provider>
     </entry>
