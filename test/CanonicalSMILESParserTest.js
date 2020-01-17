@@ -183,7 +183,7 @@ const CanonicalSMILESParserV2Test = () => {
     const MongoClient = require('mongodb').MongoClient
     const S = require('string');
 
-    MongoClient.connect('mongodb+srv://kevin:' + process.env.MONGODBPASSWORD + '!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
+    MongoClient.connect('mongodb+srv://' + process.env.MONGODBUSER + ':' + process.env.MONGODBPASSWORD + '!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
         function (err, client) {
 
             console.log('Connecting to MONGO')
