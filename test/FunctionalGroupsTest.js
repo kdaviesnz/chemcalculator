@@ -3,6 +3,13 @@ const FunctionalGroups = require('../lib/FunctionalGroups')
 
 const FunctionalGroupsTest = () => {
 
+// methyl ketone (methyl piperonal ketone)
+    const mk = {
+        "CanonicalSMILES":'CC(=O)CC1=CC2=C(C=C1)OCO2'
+    }
+
+    const mkfg = FunctionalGroups(mk).functionalGroups.methyl_ketone
+    mkfg[2].should.be.equal('C')
 
     //!terminal alkene (safrole)
     const safrole = {
@@ -25,15 +32,6 @@ const FunctionalGroupsTest = () => {
     g[3].should.be.equal('')
 
 
-// methyl ketone (methyl piperonal ketone)
-    const mk = {
-        "CanonicalSMILES":'CC(=O)CC1=CC2=C(C=C1)OCO2'
-    }
-
-    const mkfg = FunctionalGroups(mk)
-    console.log(mkfg)
-    process.exit()
-    mkfg[0].should.be.equal('O')
 
 
 }
