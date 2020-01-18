@@ -1,3 +1,4 @@
+require("dotenv").config()
 const should = require('should');
 const Synthesize = require('../lib/Synthesize')
 
