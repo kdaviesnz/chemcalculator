@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FindSubstrates.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FindSubstrates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/MoleculeLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/MoleculeLookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PubChemLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PubChemLookup.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +17,12 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="15" />
+          <entry key="js" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="15" />
+          <entry key="JavaScript" value="17" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -31,12 +30,12 @@
         <counts>
           <entry key="env" value="13" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="1397" />
+          <entry key="js" value="1434" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1397" />
+          <entry key="JavaScript" value="1434" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -55,19 +54,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+        <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="373" column="16" selection-start-line="373" selection-start-column="16" selection-end-line="373" selection-end-column="16" />
+            <state relative-caret-position="169">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
+        <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="147" column="157" selection-start-line="147" selection-start-column="157" selection-end-line="147" selection-end-column="157" />
+            <state relative-caret-position="116">
+              <caret line="226" column="49" selection-start-line="226" selection-start-column="40" selection-end-line="226" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -92,6 +91,9 @@
       <find>pinacolRearrangemenReverse</find>
       <find>wacker</find>
       <find>permanganateOx</find>
+      <find>searchBySMILES</find>
+      <find>There was an error searchBySM</find>
+      <find>searchByS</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,6 +112,8 @@
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
+        <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
+        <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
       </list>
     </option>
   </component>
@@ -208,22 +212,22 @@
       <workItem from="1579319754576" duration="1380000" />
       <workItem from="1579323155139" duration="1169000" />
       <workItem from="1579381672008" duration="1661000" />
-      <workItem from="1579414158770" duration="645000" />
+      <workItem from="1579414158770" duration="1194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8626000" />
+    <option name="totallyTimeSpent" value="9175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1228" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2782462" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1703204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -232,7 +236,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.55625" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.296875" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,9 +252,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/should/cjs/should.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4110">
@@ -326,8 +327,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="373" column="16" selection-start-line="373" selection-start-column="16" selection-end-line="373" selection-end-column="16" />
+        <state relative-caret-position="116">
+          <caret line="386" column="27" lean-forward="true" selection-start-line="386" selection-start-column="27" selection-end-line="386" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="226" column="49" selection-start-line="226" selection-start-column="40" selection-end-line="226" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
         </state>
       </provider>
     </entry>
