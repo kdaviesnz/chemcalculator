@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/PubChemLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PubChemLookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +18,12 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="22" />
+          <entry key="js" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="22" />
+          <entry key="JavaScript" value="23" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -31,24 +31,25 @@
         <counts>
           <entry key="env" value="13" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="1629" />
+          <entry key="js" value="1934" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1629" />
+          <entry key="JavaScript" value="1934" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -58,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
+            <state relative-caret-position="1395">
               <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
             </state>
           </provider>
@@ -67,17 +68,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2265">
+            <state relative-caret-position="338">
               <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-674">
-              <caret line="292" column="14" selection-start-line="292" selection-start-column="10" selection-end-line="292" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="310" column="11" selection-start-line="310" selection-start-column="11" selection-end-line="310" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -85,17 +86,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/CanonicalSMILESParserTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="86" selection-start-line="86" selection-end-line="95" selection-end-column="13" />
+            <state relative-caret-position="-3903">
+              <caret line="181" selection-start-line="181" selection-end-line="193" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="177">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -135,6 +136,9 @@
       <find>There was an error se</find>
       <find>perman</find>
       <find>perm</find>
+      <find>runTest</find>
+      <find>permanganateOxidationReverse</find>
+      <find>permanganateOxidation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,11 +155,11 @@
         <option value="$PROJECT_DIR$/lib/Synthesize.js" />
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
-        <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
         <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
         <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
         <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
+        <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
       </list>
     </option>
   </component>
@@ -186,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,6 +211,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,18 +260,19 @@
       <workItem from="1579381672008" duration="1661000" />
       <workItem from="1579414158770" duration="1226000" />
       <workItem from="1579419211242" duration="792000" />
-      <workItem from="1579420923089" duration="374000" />
+      <workItem from="1579420923089" duration="404000" />
+      <workItem from="1579497860997" duration="764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10373000" />
+    <option name="totallyTimeSpent" value="11167000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1228" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17537943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17790894" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -280,7 +285,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.325" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.325" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -348,10 +353,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
+    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
+        <state relative-caret-position="15">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -362,38 +374,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
+    <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="93" column="35" selection-start-line="93" selection-start-column="35" selection-end-line="93" selection-end-column="35" />
+        <state relative-caret-position="338">
+          <caret line="151" column="17" selection-start-line="151" selection-start-column="17" selection-end-line="151" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/CanonicalSMILESParserTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="86" selection-start-line="86" selection-end-line="95" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-674">
-          <caret line="292" column="14" selection-start-line="292" selection-start-column="10" selection-end-line="292" selection-end-column="14" />
+        <state relative-caret-position="-3903">
+          <caret line="181" selection-start-line="181" selection-end-line="193" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="177">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="310" column="11" selection-start-line="310" selection-start-column="11" selection-end-line="310" selection-end-column="11" />
         </state>
       </provider>
     </entry>
