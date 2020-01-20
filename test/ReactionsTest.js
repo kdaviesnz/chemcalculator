@@ -5,8 +5,10 @@ const Reactions = require('../lib/CanonicalSmilesParserv2')
 const ReactionsTest = () => {
 
     const verbose = true
-
-    MoleculeLookup(db, "Reactions", 'SMILES', true).then(
+const methyl_piperonal_ketone = "CC(=O)CC1=CC2=C(C=C1)OCO2"
+    MoleculeLookup(db, methyl_piperonal_ketone, 'SMILES', true, "", (err)=>{
+        cinsole.log(err)
+    }).then(
         (molecule_JSON_object) => {
             console.log("[" + functional_group + "] " + molecule_JSON_object.IUPACName)
             const parser = Reactions(
