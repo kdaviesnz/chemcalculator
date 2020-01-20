@@ -18,7 +18,13 @@ const methyl_piperonal_ketone = "CC(=O)CC1=CC2=C(C=C1)OCO2"
                 (canonical_SMILES, substrate_JSON_object, reagents) => {
                 }
             )
-
+parser.permanganateOxidationReverse((rule,
+                                        molecule_json_object,
+                                        substrate,
+                                        rule.reagents,
+                                        child_reaction_as_string,
+                                        "permanganateOxidationReverse")=> {
+}
         }
     )
 
