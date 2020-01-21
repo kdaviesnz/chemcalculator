@@ -43,7 +43,8 @@ const ReactionsTest = () => {
                     })
                     
                     parser.wackerOxidationReverse((canonical_SMILES, substrate_JSON_object, reagents) => {
-                         console.log("permanganateOxidationReverse() testing")
+                         console.log("wackerOxidationReverse() testing")
+                         substrate_JSON_object.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                     })
                     
                 }
