@@ -25,18 +25,30 @@ const ReactionsTest = () => {
             MoleculeLookup(db, methyl_piperonal_ketone, 'SMILES', true, "", (err) => {
                 console.log(err)
             }).then(
-                (molecule_JSON_object) => {
+                
+                (methyl_piperonal_ketone_object) => {
+                    
+                    
                     const parser = Reactions(
-                        molecule_JSON_object,
+                        methyl_piperonal_ketone_object,
                         db,
                         {},
                         (canonical_SMILES, substrate_JSON_object, reagents) => {
+                            
                         }
                     )
-                    parser.permanganateOxidationReverse(() => {
-
+                    
+                    parser.permanganateOxidationReverse((canonical_SMILES, substrate_JSON_object, reagents) => {
+                            console.log("permanganateOxidationReverse() testing")
                     })
+                    
+                    parser.wackerOxidationReverse((canonical_SMILES, substrate_JSON_object, reagents) => {
+                         console.log("permanganateOxidationReverse() testing")
+                    })
+                    
                 }
+                
+                
             )
         })
 
