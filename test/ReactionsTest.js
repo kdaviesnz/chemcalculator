@@ -40,11 +40,11 @@ const ReactionsTest = () => {
                         }
                     )
 
-                    PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
+                    PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents, "", "PermanganateOxidation test" ) => {
                             console.log("permanganateOxidationReverse() testing")
                     })
                     
-                    WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
+                    WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents,"", "WackerOxidation test" ) => {
                          console.log("wackerOxidationReverse testing")
                          substrate_JSON_object.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                 }
