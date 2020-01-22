@@ -2,6 +2,7 @@ require("dotenv").config()
 const should = require('should');
 const Reactions = require('../lib/CanonicalSmilesParserv2')
 const MoleculeLookup = require('../lib/MoleculeLookup')
+const WackerOxidation = require('../lib/reactions/wackerOxidation.js')
 
 const ReactionsTest = () => {
 
@@ -42,8 +43,8 @@ const ReactionsTest = () => {
                             console.log("permanganateOxidationReverse() testing")
                     })
                     
-                    parser.wackerOxidationReverse((canonical_SMILES, substrate_JSON_object, reagents) => {
-                         console.log("wackerOxidationReverse() testing")
+                    WackerOxidation.reverse(methyl_piperonal_ketone_object, (canonical_SMILES, substrate_JSON_object, reagents) => {
+                         console.log("wackerOxidationReverse testing")
                          substrate_JSON_object.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                   
 
