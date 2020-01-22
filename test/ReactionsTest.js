@@ -70,7 +70,7 @@ Looking up CC1=CC2=C(C=C1)OCO2(=C)C
 C=C
 
   })
-                    
+          C=CCCC1=CC2=C(C=C1)OCO2         
                 }
                 
                 
