@@ -48,29 +48,6 @@ const ReactionsTest = () => {
                          substrate_JSON_object.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                   
 
-        /*
-        calling wackerOxidationReverse()
-{ ketone: [ 'O', 'CC1=CC2=C(C=C1)OCO2', 'C' ],
-  tertiary_amine: false,
-  secondary_amine: false,
-  primary_amine: false,
-  amide: false,
-  epoxide: false,
-  ester: false,
-  glycol: false,
-  alcohol: false,
-  aldehyde: false,
-  methyl_ketone: [ 'O', 'CC1=CC2=C(C=C1)OCO2', 'C' ],
-  terminal_alkene: false }
-Looking up CC1=CC2=C(C=C1)OCO2(=C)C
-         */
-        MoleculeLookup(db,
-            "C=C" +
-            molecule.functionalGroups.ketone[2] + molecule.functionalGroups.ketone[1],
-C=C
-
-  })
-          C=CCCC1=CC2=C(C=C1)OCO2         
                 }
                 
                 
