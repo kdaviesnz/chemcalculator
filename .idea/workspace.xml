@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/FindSubstrates.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FindSubstrates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +19,12 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="31" />
+          <entry key="js" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="31" />
+          <entry key="JavaScript" value="36" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -30,12 +32,12 @@
         <counts>
           <entry key="env" value="13" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="2773" />
+          <entry key="js" value="2845" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="2773" />
+          <entry key="JavaScript" value="2845" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -57,11 +59,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6036">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="204" column="33" lean-forward="true" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+            <state relative-caret-position="322">
+              <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/reactions/Oxymercuration.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/reactions/WackerOxidation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -115,10 +144,11 @@
         <option value="$PROJECT_DIR$/lib/FunctionalGroups.js" />
         <option value="$PROJECT_DIR$/test/FunctionalGroupsTest.js" />
         <option value="$PROJECT_DIR$/lib/reactions/wackerOxidation.js" />
-        <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js" />
-        <option value="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" />
         <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" />
+        <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
       </list>
     </option>
@@ -162,6 +192,12 @@
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="reactions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
@@ -227,12 +263,12 @@
       <workItem from="1579591562756" duration="957000" />
       <workItem from="1579631852278" duration="305000" />
       <workItem from="1579680141316" duration="877000" />
-      <workItem from="1579717511039" duration="366000" />
+      <workItem from="1579717511039" duration="803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15065000" />
+    <option name="totallyTimeSpent" value="15502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1228" height="732" extended-state="0" />
@@ -298,13 +334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FetchReactions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -361,13 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4380">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -377,15 +399,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/WackerOxidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="495">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/Oxymercuration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/FetchReactions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6036">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="204" column="33" lean-forward="true" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+        <state relative-caret-position="322">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
         </state>
       </provider>
     </entry>
