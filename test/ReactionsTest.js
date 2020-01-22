@@ -43,7 +43,7 @@ const ReactionsTest = () => {
                             console.log("permanganateOxidationReverse() testing")
                     })
                     
-                    WackerOxidation.reverse(methyl_piperonal_ketone_object, (canonical_SMILES, substrate_JSON_object, reagents) => {
+                    WackerOxidation(methyl_piperonal_ketone_object).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
                          console.log("wackerOxidationReverse testing")
                          substrate_JSON_object.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                   
