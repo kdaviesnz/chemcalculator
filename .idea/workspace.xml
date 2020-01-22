@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/wackerOxidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +31,12 @@
         <counts>
           <entry key="env" value="13" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="2493" />
+          <entry key="js" value="2763" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="2493" />
+          <entry key="JavaScript" value="2763" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -58,19 +58,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="338">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="-18960">
               <caret line="292" selection-start-line="292" selection-end-line="292" />
             </state>
           </provider>
@@ -79,26 +79,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1126">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state>
+              <caret column="98" selection-start-column="29" selection-end-column="98" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reactions/ArrheniusAcidicReaction.js">
+        <entry file="file://$PROJECT_DIR$/lib/reactions/WackerOxidation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reactions/wackerOxidation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="314">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -149,12 +140,13 @@
         <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
         <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
         <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
-        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
         <option value="$PROJECT_DIR$/lib/FunctionalGroups.js" />
         <option value="$PROJECT_DIR$/test/FunctionalGroupsTest.js" />
         <option value="$PROJECT_DIR$/lib/reactions/wackerOxidation.js" />
-        <option value="$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" />
+        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
       </list>
     </option>
   </component>
@@ -267,12 +259,12 @@
       <workItem from="1579503794357" duration="1064000" />
       <workItem from="1579591562756" duration="957000" />
       <workItem from="1579631852278" duration="305000" />
-      <workItem from="1579680141316" duration="257000" />
+      <workItem from="1579680141316" duration="853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14079000" />
+    <option name="totallyTimeSpent" value="14675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="23" width="1228" height="732" extended-state="0" />
@@ -394,13 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/ArrheniusAcidicReaction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -408,24 +393,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/wackerOxidation.js">
+    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        <state relative-caret-position="-18960">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1126">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state>
+          <caret column="98" selection-start-column="29" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+    <entry file="file://$PROJECT_DIR$/lib/reactions/WackerOxidation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="292" selection-start-line="292" selection-end-line="292" />
+        <state relative-caret-position="314">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
