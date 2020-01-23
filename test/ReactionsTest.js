@@ -9,7 +9,7 @@ const ReactionsTest = () => {
 
     const verbose = true
     const methyl_piperonal_ketone = "CC(=O)CC1=CC2=C(C=C1)OCO2"
-const methyl_piperonal_ketone = "CC(CC1=CC=CC=C1)NC"
+    const methamphetamine = "CC(CC1=CC=CC=C1)NC"
     
     
     // Connect to mongo database
@@ -32,15 +32,6 @@ const methyl_piperonal_ketone = "CC(CC1=CC=CC=C1)NC"
                 
                 (methyl_piperonal_ketone_object) => {
                     
-                    
-                    const parser = Reactions(
-                        methyl_piperonal_ketone_object,
-                        db,
-                        {},
-                        (canonical_SMILES, substrate_JSON_object, reagents) => {
-                            
-                        }
-                    )
 
                     PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents ) => {
                             console.log("permanganateOxidationReverse() testing")
@@ -52,6 +43,19 @@ const methyl_piperonal_ketone = "CC(CC1=CC=CC=C1)NC"
                 }
 
             )
+                    
+            MoleculeLookup(db, methamphetamine, 'SMILES', true, "", (err) => {
+                console.log(err)
+            }).then(     
+                
+                (methamphetamine_object) => {
+                    
+                    
+                    
+                }
+                
+            )
+                    
         })
 
 }
