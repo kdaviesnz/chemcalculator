@@ -50,6 +50,12 @@ const ReactionsTest = () => {
                 
                 (methamphetamine_object) => {
                     
+                    // CC(C(C1=CC=CC=C1)O)NC pseudoephedrine
+                    // (1S,2S)-2-(methylamino)-1-phenylpropan-1-ol
+                    NagaiMethod(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents ) => {
+                            console.log("NagaiMethod() testing")
+                    })
+                    
                     
                     
                 }
