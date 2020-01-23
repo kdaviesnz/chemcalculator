@@ -9,7 +9,9 @@ const ReactionsTest = () => {
 
     const verbose = true
     const methyl_piperonal_ketone = "CC(=O)CC1=CC2=C(C=C1)OCO2"
-
+const methyl_piperonal_ketone = "CC(CC1=CC=CC=C1)NC"
+    
+    
     // Connect to mongo database
     const MongoClient = require('mongodb').MongoClient
     const S = require('string');
