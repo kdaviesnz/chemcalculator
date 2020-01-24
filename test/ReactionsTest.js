@@ -5,6 +5,7 @@ const MoleculeLookup = require('../lib/MoleculeLookup')
 const WackerOxidation = require('../lib/reactions/WackerOxidation.js')
 const PermanganateOxidation = require('../lib/reactions/PermanganateOxidation.js')
 const PinacolRearrangement = require('../lib/reactions/PinacolRearrangement.js')
+const FunctionalGroups = require('../lib/FunctionalGroups')
 
 const ReactionsTest = () => {
 
@@ -34,6 +35,8 @@ const ReactionsTest = () => {
                 
                 (methyl_piperonal_ketone_object) => {
 
+
+                    methyl_piperonal_ketone_object.functionalGroups = FunctionalGroups(methyl_piperonal_ketone_object).functionalGroups
 
                     PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
                         console.log("permanganateOxidationReverse() testing")
