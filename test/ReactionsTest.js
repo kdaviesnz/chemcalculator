@@ -67,9 +67,11 @@ const ReactionsTest = () => {
                     // CC(C(C1=CC=CC=C1)O)NC pseudoephedrine
                     // (1S,2S)-2-(methylamino)-1-phenylpropan-1-ol
                     NagaiMethod(methamphetamine_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents ) => {
-                            console.log("NagaiMethod() testing")
-                        
+
                       //  substrate_JSON_object.CanonicalSMILES.should.be.equal(pseudoephedrine)
+                        if (substrate_JSON_object.CanonicalSMILES === pseudoephedrine) {
+                            console.log("Nagai method passed")
+                        }
                         
                         
                     })
