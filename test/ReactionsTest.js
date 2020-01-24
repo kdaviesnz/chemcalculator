@@ -44,13 +44,14 @@ const ReactionsTest = () => {
                     })
 
                     WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
-                        console.log("wackerOxidationReverse testing")
                         substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                     })
 
                     PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
                         console.log("PinacolRearrangement reverse testing")
-                       // substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
+                        //console.log(substrate.CanonicalSMILES)
+                        // CC(C(C1=CC2=C(C=C1)OCO2)O)O
+                        substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
                     })
 
                 }
@@ -66,9 +67,10 @@ const ReactionsTest = () => {
                     
                     // CC(C(C1=CC=CC=C1)O)NC pseudoephedrine
                     // (1S,2S)-2-(methylamino)-1-phenylpropan-1-ol
-                    NagaiMethod(methamphetamine_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents ) => {
+                    NagaiMethod(methamphetamine_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents ) => {
 
                       //  substrate_JSON_object.CanonicalSMILES.should.be.equal(pseudoephedrine)
+
                         if (substrate_JSON_object.CanonicalSMILES === pseudoephedrine) {
                             console.log("Nagai method passed")
                         }
