@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/FindSubstrates.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FindSubstrates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +32,12 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="4359" />
+          <entry key="js" value="4382" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="4359" />
+          <entry key="JavaScript" value="4382" />
           <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
@@ -66,13 +62,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3980">
+            <state relative-caret-position="16635">
               <caret line="1088" selection-start-line="1088" selection-end-line="1088" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/reactions/ReductiveAmination.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -90,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="461" column="162" selection-start-line="461" selection-start-column="155" selection-end-line="461" selection-end-column="162" />
+            <state relative-caret-position="105">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -169,8 +165,8 @@
         <option value="$PROJECT_DIR$/lib/FunctionalGroups.js" />
         <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
-        <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
+        <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
       </list>
     </option>
   </component>
@@ -287,18 +283,18 @@
       <workItem from="1579680141316" duration="877000" />
       <workItem from="1579717511039" duration="1613000" />
       <workItem from="1579888591708" duration="5113000" />
-      <workItem from="1579905848757" duration="396000" />
+      <workItem from="1579905848757" duration="453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21821000" />
+    <option name="totallyTimeSpent" value="21878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="23" width="1228" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20067453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20067453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -311,7 +307,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4421875" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4421875" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -477,24 +473,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/ReductiveAmination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3980">
+        <state relative-caret-position="16635">
           <caret line="1088" selection-start-line="1088" selection-end-line="1088" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="461" column="162" selection-start-line="461" selection-start-column="155" selection-end-line="461" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/ReductiveAmination.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        <state relative-caret-position="105">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
         </state>
       </provider>
     </entry>
