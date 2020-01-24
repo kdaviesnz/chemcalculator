@@ -12,6 +12,7 @@ const ReactionsTest = () => {
     const methyl_piperonal_ketone = "CC(=O)CC1=CC2=C(C=C1)OCO2"
     const methamphetamine = "CC(CC1=CC=CC=C1)NC"
     const pseudoephedrine = "CC(C(C1=CC=CC=C1)O)NC"
+    const isosafroleglycol = "CC(C(C1=CC2=C(C=C1)OCO2)O)O"
     
     // Connect to mongo database
     const MongoClient = require('mongodb').MongoClient
@@ -45,7 +46,7 @@ const ReactionsTest = () => {
                     
                     PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
                          console.log("PinacolRearrangement reverse testing")
-                         substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
+                         substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
                     })
 
             )
