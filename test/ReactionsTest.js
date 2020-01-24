@@ -18,7 +18,7 @@ const ReactionsTest = () => {
     const MongoClient = require('mongodb').MongoClient
     const S = require('string');
 
-    MongoClient.connect('mongodb+srv://' + process.env.MONGODBUSER + ':' + process.env.MONGODBPASSWORD + '!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
+    MongoClient.connect('mongodb+srv://' + process.env.MONGODBUSER + ':' + process.env.MONGODBPASSWORD + '@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
         function (err, client) {
 
             console.log('Connecting to MONGO')
@@ -33,22 +33,23 @@ const ReactionsTest = () => {
             }).then(
                 
                 (methyl_piperonal_ketone_object) => {
-                    
 
-                    PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents ) => {
-                            console.log("permanganateOxidationReverse() testing")
+
+                    PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
+                        console.log("permanganateOxidationReverse() testing")
                     })
-                    
+
                     WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
-                         console.log("wackerOxidationReverse testing")
-                         substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
-                    })
-                    
-                    PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
-                         console.log("PinacolRearrangement reverse testing")
-                         substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
+                        console.log("wackerOxidationReverse testing")
+                        substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
                     })
 
+                    PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
+                        console.log("PinacolRearrangement reverse testing")
+                        substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
+                    })
+
+                }
             )
                     
             MoleculeLookup(db, methamphetamine, 'SMILES', true, "", (err) => {
