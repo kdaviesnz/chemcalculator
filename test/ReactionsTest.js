@@ -4,6 +4,7 @@ const Reactions = require('../lib/CanonicalSmilesParserv2')
 const MoleculeLookup = require('../lib/MoleculeLookup')
 const WackerOxidation = require('../lib/reactions/WackerOxidation.js')
 const PermanganateOxidation = require('../lib/reactions/PermanganateOxidation.js')
+const PinacolRearrangement = require('../lib/reactions/PinacolRearrangement.js')
 
 const ReactionsTest = () => {
 
@@ -40,7 +41,12 @@ const ReactionsTest = () => {
                     WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
                          console.log("wackerOxidationReverse testing")
                          substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
-                }
+                    })
+                    
+                    PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
+                         console.log("PinacolRearrangement reverse testing")
+                         substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
+                    })
 
             )
                     
