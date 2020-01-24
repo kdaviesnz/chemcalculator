@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/reactions/PinacolRearrangement.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/PinacolRearrangement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/NagaiMethod.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/NagaiMethod.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,12 +17,12 @@
         <counts>
           <entry key="env" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="js" value="46" />
+          <entry key="js" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="46" />
+          <entry key="JavaScript" value="48" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -30,12 +30,12 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="3512" />
+          <entry key="js" value="3572" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3512" />
+          <entry key="JavaScript" value="3572" />
           <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
@@ -60,8 +60,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="197">
+              <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/reactions/NagaiMethod.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -70,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="15" selection-end-line="1" />
+              <caret column="39" lean-forward="true" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -148,7 +157,6 @@
         <option value="$PROJECT_DIR$/test/FunctionalGroupsTest.js" />
         <option value="$PROJECT_DIR$/lib/reactions/wackerOxidation.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" />
-        <option value="$PROJECT_DIR$/lib/reactions/NagaiMethod.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Ritter.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
@@ -159,6 +167,7 @@
         <option value="$PROJECT_DIR$/lib/reactions/WackerOxidation.js" />
         <option value="$PROJECT_DIR$/lib/reactions/PinacolRearrangement.js" />
         <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/NagaiMethod.js" />
       </list>
     </option>
   </component>
@@ -200,12 +209,6 @@
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="reactions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
@@ -274,12 +277,12 @@
       <workItem from="1579631852278" duration="305000" />
       <workItem from="1579680141316" duration="877000" />
       <workItem from="1579717511039" duration="1613000" />
-      <workItem from="1579888591708" duration="2049000" />
+      <workItem from="1579888591708" duration="2429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18361000" />
+    <option name="totallyTimeSpent" value="18741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="23" width="1228" height="732" extended-state="0" />
@@ -387,13 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/NagaiMethod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/Ritter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -412,13 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="187" column="35" selection-start-line="187" selection-start-column="35" selection-end-line="187" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1117" selection-start-line="1117" selection-end-line="1117" />
         </state>
       </provider>
     </entry>
@@ -450,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/WackerOxidation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -471,10 +453,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/PermanganateOxidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/NagaiMethod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        <state relative-caret-position="197">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
         </state>
       </provider>
     </entry>
