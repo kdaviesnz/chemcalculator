@@ -43,7 +43,7 @@ const ReactionsTest = () => {
                     Oxymercuration(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
                         console.log("oxymercuration test")
                         console.log(substrate.CanonicalSMILES)
-                        substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
+                        substrate.CanonicalSMILES.should.be.equal("C#CCC1=CC2=C(C=C1)OCO2")
 
                         /*
                         PropertTable property missing
