@@ -8,6 +8,7 @@ const CarboxylicAcidToKetone = require('../lib/reactions/CarboxylicAcidToKetone.
 const FunctionalGroups = require('../lib/FunctionalGroups')
 const NagaiMethod = require('../lib/reactions/NagaiMethod.js')
 const Oxymercuration = require('../lib/reactions/Oxymercuration.js')
+const ReductiveAmination = require('../lib/reactions/ReductiveAmination.js')
 
 const ReactionsTest = () => {
 
@@ -95,6 +96,10 @@ const ReactionsTest = () => {
                     (methamphetamine_object) => {
 
                         methamphetamine_object.functionalGroups = FunctionalGroups(methamphetamine_object).functionalGroups
+
+                        ReductiveAmination(methamphetamine_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
+                            substrate_JSON_object.CanonicalSMILES.should.be.oneOf(["C=O", "CC(=O)CC1=CC=CC=C1" ])
+                        })
 
                         // CC(C(C1=CC=CC=C1)O)NC pseudoephedrine
                         // (1S,2S)-2-(methylamino)-1-phenylpropan-1-ol
