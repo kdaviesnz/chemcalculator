@@ -1,10 +1,10 @@
 require("dotenv").config()
 const should = require('should');
-const Reactions = require('../lib/CanonicalSmilesParserv2')
 const MoleculeLookup = require('../lib/MoleculeLookup')
 const WackerOxidation = require('../lib/reactions/WackerOxidation.js')
 const PermanganateOxidation = require('../lib/reactions/PermanganateOxidation.js')
 const PinacolRearrangement = require('../lib/reactions/PinacolRearrangement.js')
+const CarboxylicAcidToKetone = require('../lib/reactions/CarboxylicAcidToKetone.js')
 const FunctionalGroups = require('../lib/FunctionalGroups')
 const NagaiMethod = require('../lib/reactions/NagaiMethod.js')
 
@@ -36,11 +36,11 @@ const ReactionsTest = () => {
                 
                 (methyl_piperonal_ketone_object) => {
 
-
                     methyl_piperonal_ketone_object.functionalGroups = FunctionalGroups(methyl_piperonal_ketone_object).functionalGroups
 
                     PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
                         console.log("permanganateOxidationReverse() testing")
+                        console.log(substrate_JSON_object)
                     })
 
                     WackerOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
@@ -48,10 +48,21 @@ const ReactionsTest = () => {
                     })
 
                     PinacolRearrangement(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
-                        console.log("PinacolRearrangement reverse testing")
-                        //console.log(substrate.CanonicalSMILES)
-                        // CC(C(C1=CC2=C(C=C1)OCO2)O)O
                         substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
+                    })
+
+                    CarboxylicAcidToKetone(methyl_piperonal_ketone_object, db, {reagents:['acyclic carboxylic anhydride']}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
+                        console.log("Carboxylic acid to ketone reverse testing")
+                        console.log("Substrate:")
+                        console.log(substrate.CanonicalSMILES)
+                        // C1OC2=C(O1)C=C(C=C2)CC(=O)O
+                        // CC(=O)O
+                        console.log("Reagents")
+                        console.log(reagents)
+                        // [ 'O(C(=O)C)C(=O)C' ]
+                        // [ 'O(C(=O)CC1=CC2=C(C=C1)OCO2)C(=O)CC1=CC2=C(C=C1)OCO2' ]
+                        //
+                        // substrate.CanonicalSMILES.should.be.equal(isosafroleglycol)
                     })
 
                 }
@@ -74,12 +85,9 @@ const ReactionsTest = () => {
                         if (substrate_JSON_object.CanonicalSMILES === pseudoephedrine) {
                             console.log("Nagai method passed")
                         }
-                        
-                        
+
                     })
-                    
-                    
-                    
+
                 }
                 
             )
