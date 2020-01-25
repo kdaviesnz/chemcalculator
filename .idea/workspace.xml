@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="" />
+    <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SynthesisTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/SynthesisTest.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +17,12 @@
         <counts>
           <entry key="env" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="js" value="73" />
+          <entry key="js" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="73" />
+          <entry key="JavaScript" value="75" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -27,12 +30,12 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="5737" />
+          <entry key="js" value="5831" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="5737" />
+          <entry key="JavaScript" value="5831" />
           <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
@@ -57,29 +60,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-642">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
+        <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="208" column="32" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="88" column="24" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reactions/Oxymercuration.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="165">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -95,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carboxylic</find>
       <find>carbo</find>
       <find>wack</find>
       <find>wacke</find>
@@ -124,6 +117,7 @@
       <find>reductive</find>
       <find>console.log</find>
       <find>perm</find>
+      <find>temp</find>
       <find>SMILES +</find>
     </findStrings>
   </component>
@@ -135,7 +129,6 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
-        <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
         <option value="$PROJECT_DIR$/test/FunctionalGroupsTest.js" />
         <option value="$PROJECT_DIR$/lib/reactions/wackerOxidation.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Ritter.js" />
@@ -151,11 +144,12 @@
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
         <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
-        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" />
         <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
+        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
+        <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
       </list>
     </option>
   </component>
@@ -274,18 +268,18 @@
       <workItem from="1579905848757" duration="5072000" />
       <workItem from="1579922511497" duration="2144000" />
       <workItem from="1579933352034" duration="41000" />
-      <workItem from="1579974510893" duration="3123000" />
+      <workItem from="1579974510893" duration="5048000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31805000" />
+    <option name="totallyTimeSpent" value="33730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21001616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21001616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -298,7 +292,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3703125" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3703125" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -405,13 +399,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Synthesize.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -447,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/RulesLookup.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -480,8 +460,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
+        <state relative-caret-position="185">
           <caret line="208" column="32" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
