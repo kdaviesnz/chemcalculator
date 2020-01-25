@@ -7,6 +7,7 @@ const PinacolRearrangement = require('../lib/reactions/PinacolRearrangement.js')
 const CarboxylicAcidToKetone = require('../lib/reactions/CarboxylicAcidToKetone.js')
 const FunctionalGroups = require('../lib/FunctionalGroups')
 const NagaiMethod = require('../lib/reactions/NagaiMethod.js')
+const Oxymercuration = require('../lib/reactions/Oxymercuration.js')
 
 const ReactionsTest = () => {
 
@@ -36,7 +37,28 @@ const ReactionsTest = () => {
                 
                 (methyl_piperonal_ketone_object) => {
 
+
                     methyl_piperonal_ketone_object.functionalGroups = FunctionalGroups(methyl_piperonal_ketone_object).functionalGroups
+
+                    Oxymercuration(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((rule, methyl_piperonal_ketone_object, substrate, reagents) => {
+                        console.log("oxymercuration test")
+                        console.log(substrate.CanonicalSMILES)
+                        substrate.CanonicalSMILES.should.be.equal("C=CCC1=CC2=C(C=C1)OCO2")
+
+                        /*
+                        PropertTable property missing
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/C#CCC1=CC2=C(C=C1)OCO2/property/IUPACName,MolecularFormula,MolecularWeight,CanonicalSMILES,IsomericSMILES,InChI,InChIKey,XLogP,ExactMass,MonoisotopicMass,TPSA,Complexity,Charge,HBondDonorCount,HBondAcceptorCount,RotatableBondCount,HeavyAtomCount,IsotopeAtomCount,AtomStereoCount,DefinedAtomStereoCount,UndefinedAtomStereoCount,BondStereoCount,DefinedBondStereoCount,UndefinedBondStereoCount,CovalentUnitCount,Volume3D,XStericQuadrupole3D,YStericQuadrupole3D,ZStericQuadrupole3D,FeatureCount3D,FeatureAcceptorCount3D,FeatureDonorCount3D,FeatureAnionCount3D,FeatureCationCount3D,FeatureRingCount3D,FeatureHydrophobeCount3D,ConformerModelRMSD3D,EffectiveRotorCount3D,ConformerCount3D,Fingerprint2D/JSON
+{ PC_Compounds:
+   [ { id: [Object],
+       atoms: [Object],
+       bonds: [Object],
+       coords: [Array],
+       charge: 0,
+       props: [Array],
+       count: [Object] } ] }
+
+                         */
+                    })
 
                     PermanganateOxidation(methyl_piperonal_ketone_object, db, {}, "", null, null).reverse((canonical_SMILES, substrate_JSON_object, reagents) => {
                         console.log("permanganateOxidationReverse() testing")
