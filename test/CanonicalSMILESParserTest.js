@@ -381,8 +381,8 @@ const CanonicalSMILESParserV2Test = () => {
                         ketone: false
                     },
                     (parser) => {
-                        parser.mashCarboxylGroupsIntoAnEpoxideRing((rule, canonical_SMILES, substrate, reagents) => {
-                                console.log('Calling mashCarboxylGroupsIntoAnEpoxideRing() callback')
+                        parser.AcidCatalyzedRingOpening((rule, canonical_SMILES, substrate, reagents) => {
+                                console.log('Calling AcidCatalyzedRingOpening() callback')
                                 substrate.CanonicalSMILES.should.be.a.String()
                                 substrate.CanonicalSMILES.should.be.equal('CC1C(O1)C2=CC3=C(C=C2)OCO3')
                                 substrate.IUPACName.should.be.equal('5-(3-methyloxiran-2-yl)-1,3-benzodioxole')

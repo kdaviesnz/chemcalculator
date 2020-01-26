@@ -9,6 +9,7 @@ const FunctionalGroups = require('../lib/FunctionalGroups')
 const NagaiMethod = require('../lib/reactions/NagaiMethod.js')
 const Oxymercuration = require('../lib/reactions/Oxymercuration.js')
 const ReductiveAmination = require('../lib/reactions/ReductiveAmination.js')
+const AcidCatalysedRingOpening = require('../lib/reactions/AcidCatalyzedRingOpening.js')
 
 const ReactionsTest = () => {
 
@@ -31,6 +32,23 @@ const ReactionsTest = () => {
                 process.exit()
             }
             const db = client.db('chemistry');
+
+            if (true) {
+                MoleculeLookup(db, isosafroleglycol, 'SMILES', true, "", (err) => {
+                    console.log(err)
+                }).then(
+                    (isosafroleglycol_object) => {
+
+                        isosafroleglycol_object.functionalGroups = FunctionalGroups(isosafroleglycol_object).functionalGroups
+
+                        AcidCatalysedRingOpening(isosafroleglycol_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
+                            console.log("Ran AcidCatalysedRingOpening test")
+                            console.log(substrate_JSON_object)
+                        })
+
+                    }
+                )
+            }
 
             if (false) {
                 MoleculeLookup(db, methyl_piperonal_ketone, 'SMILES', true, "", (err) => {
@@ -89,7 +107,7 @@ const ReactionsTest = () => {
 
             }
 
-            if (true) {
+            if (false) {
                 MoleculeLookup(db, methamphetamine, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
