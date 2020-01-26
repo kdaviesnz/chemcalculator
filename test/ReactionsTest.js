@@ -18,6 +18,7 @@ const ReactionsTest = () => {
     const methamphetamine = "CC(CC1=CC=CC=C1)NC"
     const pseudoephedrine = "CC(C(C1=CC=CC=C1)O)NC"
     const isosafroleglycol = "CC(C(C1=CC2=C(C=C1)OCO2)O)O"
+    const isosafroloxyd = "CC1C(O1)C2=CC3=C(C=C2)OCO3"
     
     // Connect to mongo database
     const MongoClient = require('mongodb').MongoClient
@@ -43,7 +44,7 @@ const ReactionsTest = () => {
 
                         AcidCatalysedRingOpening(isosafroleglycol_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
                             console.log("Ran AcidCatalysedRingOpening test")
-                            console.log(substrate_JSON_object)
+                            substrate_JSON_object.CanonicalSMILES.should.be.equal(isosafroloxyd)
                         })
 
                     }

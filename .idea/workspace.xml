@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +18,12 @@
         <counts>
           <entry key="env" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="js" value="81" />
+          <entry key="js" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="81" />
+          <entry key="JavaScript" value="83" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -29,18 +31,18 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="6743" />
+          <entry key="js" value="6868" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="6743" />
+          <entry key="JavaScript" value="6868" />
           <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="2" />
@@ -48,50 +50,33 @@
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+            <state relative-caret-position="193">
+              <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="1027" selection-start-line="1027" selection-end-line="1027" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+            <state relative-caret-position="240">
+              <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -170,8 +155,8 @@
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
-        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" />
+        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
       </list>
     </option>
   </component>
@@ -207,6 +192,17 @@
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="reactions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
@@ -281,18 +277,19 @@
       <workItem from="1579933352034" duration="41000" />
       <workItem from="1579974510893" duration="9122000" />
       <workItem from="1579986844885" duration="39000" />
-      <workItem from="1580007414453" duration="1786000" />
+      <workItem from="1580007414453" duration="1812000" />
+      <workItem from="1580077392270" duration="555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39629000" />
+    <option name="totallyTimeSpent" value="40210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21647818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2197092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -471,10 +468,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
+    <entry file="file://$PROJECT_DIR$/test/NomenclatureTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="126">
+          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -485,17 +482,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+    <entry file="file://$PROJECT_DIR$/lib/FindSubstrates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        <state relative-caret-position="240">
+          <caret line="62" column="40" lean-forward="true" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
         </state>
       </provider>
     </entry>
