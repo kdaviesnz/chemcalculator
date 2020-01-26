@@ -9,7 +9,8 @@ const SynthesizeTest = () => {
 
 // Methyl piperonyl ketone
     // propylene glycol 1,2-propanediol CC(CO)O
-    const search = "methamphetamine"
+    // isosafrole glycole
+    const search = "isosafrole glycol"
 
     const render = (rule, molecule_JSON_object,substrate_JSON_object, reagents, child_reaction_as_string, debug )=>{
 
