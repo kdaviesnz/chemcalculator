@@ -10,6 +10,7 @@ const NagaiMethod = require('../lib/reactions/NagaiMethod.js')
 const Oxymercuration = require('../lib/reactions/Oxymercuration.js')
 const ReductiveAmination = require('../lib/reactions/ReductiveAmination.js')
 const AcidCatalysedRingOpening = require('../lib/reactions/AcidCatalyzedRingOpening.js')
+const AlcoholDehydration = require('../lib/reactions/AlcoholDehydration.js')
 
 const ReactionsTest = () => {
 
@@ -33,6 +34,20 @@ const ReactionsTest = () => {
                 process.exit()
             }
             const db = client.db('chemistry');
+
+            if (true) {
+                MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
+                    console.log(err)
+                }).then(
+                    (safrole_object) => {
+                        safrole_object.functionalGroups = FunctionalGroups(safrole_object).functionalGroups
+                        AlcoholDehydration(safrole_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
+                            console.log("Ran AlcoholDehydration test")
+                            substrate_JSON_object.CanonicalSMILES.should.be.equal(isosafroloxyd)
+                        })
+                    }
+                )
+            }
 
             if (true) {
                 MoleculeLookup(db, isosafroleglycol, 'SMILES', true, "", (err) => {

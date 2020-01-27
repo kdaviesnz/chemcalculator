@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReactionsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReactionsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,12 +16,12 @@
         <counts>
           <entry key="env" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="js" value="86" />
+          <entry key="js" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="86" />
+          <entry key="JavaScript" value="87" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -30,12 +29,12 @@
         <counts>
           <entry key="env" value="19" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="7409" />
+          <entry key="js" value="7464" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="7409" />
+          <entry key="JavaScript" value="7464" />
           <entry key="PLAIN_TEXT" value="29" />
         </counts>
       </usages-collector>
@@ -63,9 +62,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="236">
               <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
@@ -144,10 +152,10 @@
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" />
-        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
         <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" />
+        <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
       </list>
     </option>
   </component>
@@ -184,17 +192,6 @@
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="reactions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
@@ -271,18 +268,18 @@
       <workItem from="1580007414453" duration="1812000" />
       <workItem from="1580077392270" duration="1385000" />
       <workItem from="1580088855164" duration="249000" />
-      <workItem from="1580110869680" duration="617000" />
+      <workItem from="1580110869680" duration="862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41906000" />
+    <option name="totallyTimeSpent" value="42151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22617124" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22617124" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -295,7 +292,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3765625" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3765625" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -489,17 +486,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
+    <entry file="file://$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        <state relative-caret-position="236">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js">
+    <entry file="file://$PROJECT_DIR$/test/ReactionsTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="199">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
