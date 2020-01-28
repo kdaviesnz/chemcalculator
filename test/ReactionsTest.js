@@ -21,7 +21,7 @@ const ReactionsTest = () => {
     const isosafroleglycol = "CC(C(C1=CC2=C(C=C1)OCO2)O)O"
     const isosafroloxyd = "CC1C(O1)C2=CC3=C(C=C2)OCO3"
     const safrole = "C=CCC1=CC2=C(C=C1)OCO2"
-    const homopiperonyl = "OCCC1=CC2=C(C=C1)OCO2"
+    const homopiperonylalcohol = "OCCC1=CC2=C(C=C1)OCO2"
     
     // Connect to mongo database
     const MongoClient = require('mongodb').MongoClient
@@ -45,7 +45,7 @@ const ReactionsTest = () => {
                         safrole_object.functionalGroups = FunctionalGroups(safrole_object).functionalGroups
                         AlcoholDehydration(safrole_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
                             console.log("Ran AlcoholDehydration test")
-                            substrate_JSON_object.CanonicalSMILES.should.be.equal(isosafroloxyd)
+                            substrate_JSON_object.CanonicalSMILES.should.be.equal(homopiperonylalcohol)
                         })
                     }
                 )
