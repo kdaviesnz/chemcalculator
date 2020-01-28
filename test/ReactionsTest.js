@@ -60,9 +60,14 @@ const ReactionsTest = () => {
                         safrole_object.functionalGroups = FunctionalGroups(safrole_object).functionalGroups
                         AkylHalideDehydration(safrole_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
                             console.log("Ran AkylHalideDehydration test")
+                            // ["Cl", "Br", "[At]", "F", "I"]
                             substrate_JSON_object.CanonicalSMILES.should.be.oneOf(
                                 [
-                                    "ClCCCC1=CC2=C(C=C1)OCO2"
+                                    "ClCCCC1=CC2=C(C=C1)OCO2",
+                                    "BrCCCC1=CC2=C(C=C1)OCO2",
+                                    "[At]CCCC1=CC2=C(C=C1)OCO2",
+                                    "FCCCC1=CC2=C(C=C1)OCO2",
+                                    "ICCCC1=CC2=C(C=C1)OCO2"
                                 ]
                             )
                         })
