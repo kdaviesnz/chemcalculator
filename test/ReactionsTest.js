@@ -11,6 +11,7 @@ const Oxymercuration = require('../lib/reactions/Oxymercuration.js')
 const ReductiveAmination = require('../lib/reactions/ReductiveAmination.js')
 const AcidCatalysedRingOpening = require('../lib/reactions/AcidCatalyzedRingOpening.js')
 const AlcoholDehydration = require('../lib/reactions/AlcoholDehydration.js')
+const AkylHalideDehydration = require('../lib/reactions/AkylHalideDehydration.js')
 
 const ReactionsTest = () => {
 
@@ -46,6 +47,24 @@ const ReactionsTest = () => {
                         AlcoholDehydration(safrole_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
                             console.log("Ran AlcoholDehydration test")
                             substrate_JSON_object.CanonicalSMILES.should.be.equal(homopiperonylalcohol)
+                        })
+                    }
+                )
+            }
+
+            if (true) {
+                MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
+                    console.log(err)
+                }).then(
+                    (safrole_object) => {
+                        safrole_object.functionalGroups = FunctionalGroups(safrole_object).functionalGroups
+                        AkylHalideDehydration(safrole_object, db, {}, "", null, null).reverse((rule, canonical_SMILES, substrate_JSON_object, reagents) => {
+                            console.log("Ran AkylHalideDehydration test")
+                            substrate_JSON_object.CanonicalSMILES.should.be.oneOf(
+                                [
+                                    "ClCCCC1=CC2=C(C=C1)OCO2"
+                                ]
+                            )
                         })
                     }
                 )
