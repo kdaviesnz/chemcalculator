@@ -21,6 +21,7 @@ const ReactionsTest = () => {
     const isosafroleglycol = "CC(C(C1=CC2=C(C=C1)OCO2)O)O"
     const isosafroloxyd = "CC1C(O1)C2=CC3=C(C=C2)OCO3"
     const safrole = "C=CCC1=CC2=C(C=C1)OCO2"
+    const homopiperonyl = "OCCC1=CC2=C(C=C1)OCO2"
     
     // Connect to mongo database
     const MongoClient = require('mongodb').MongoClient
