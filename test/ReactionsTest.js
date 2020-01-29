@@ -52,7 +52,7 @@ const ReactionsTest = () => {
                 )
             }
 
-            if (true) {
+            if (false) {
                 MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
@@ -75,7 +75,7 @@ const ReactionsTest = () => {
                 )
             }
 
-            if (true) {
+            if (false) {
                 MoleculeLookup(db, isosafroleglycol, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
