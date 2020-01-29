@@ -38,7 +38,7 @@ const ReactionsTest = () => {
             }
             const db = client.db('chemistry');
 
-            if (false) {
+            if (true) {
                 MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
@@ -53,7 +53,7 @@ const ReactionsTest = () => {
                 )
             }
 
-            if (true) {
+            if (false) {
                 MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
