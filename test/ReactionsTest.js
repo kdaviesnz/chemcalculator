@@ -38,7 +38,7 @@ const ReactionsTest = () => {
             }
             const db = client.db('chemistry');
 
-            if (true) {
+            if (false) {
                 MoleculeLookup(db, safrole, 'SMILES', true, "", (err) => {
                     console.log(err)
                 }).then(
@@ -64,11 +64,9 @@ const ReactionsTest = () => {
                             // ["Cl", "Br", "[At]", "F", "I"]
                             substrate_JSON_object.CanonicalSMILES.should.be.oneOf(
                                 [
-                                    "ClCCCC1=CC2=C(C=C1)OCO2",
-                                    "BrCCCC1=CC2=C(C=C1)OCO2",
-                                    "[At]CCCC1=CC2=C(C=C1)OCO2",
-                                    "FCCCC1=CC2=C(C=C1)OCO2",
-                                    "ICCCC1=CC2=C(C=C1)OCO2"
+                                    "C1OC2=C(O1)C=C(C=C2)CCCl",
+                                    "C1OC2=C(O1)C=C(C=C2)CCBr",
+                                    "C1OC2=C(O1)C=C(C=C2)CCI"
                                 ]
                             )
                         })
