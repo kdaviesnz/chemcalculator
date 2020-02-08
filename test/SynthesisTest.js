@@ -10,7 +10,7 @@ const SynthesizeTest = () => {
 // Methyl piperonyl ketone
     // propylene glycol 1,2-propanediol CC(CO)O
     // isosafrole glycole
-    const search = "safrole"
+    const search = "methyl piperonyl ketone"
 
     const render = (rule, molecule_JSON_object,substrate_JSON_object, reagents, child_reaction_as_string, debug )=>{
 
