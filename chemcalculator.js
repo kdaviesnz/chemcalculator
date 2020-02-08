@@ -225,6 +225,9 @@ MongoClient.connect('mongodb+srv://kevin:77777!@cluster0-awqh6.mongodb.net', {us
                                 if (undefined === tokens[2]) {
                                     ArrheniusBaseReaction(potassium_hydroxide)
                                 } else {
+                                    if (tokens[2] === false) {
+                                        return false
+                                    }
                                     MoleculeLookup(db, tokens[2]).then(
                                         // "resolves" callback
                                         (second_molecule_JSON_object) => {

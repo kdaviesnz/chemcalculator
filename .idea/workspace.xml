@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FetchReactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FetchReactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/FindSubstrates.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FindSubstrates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/MoleculeLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/MoleculeLookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chemcalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/chemcalculator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CanonicalSMILESParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSMILESParser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/PubChemLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PubChemLookup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ReactionSchemaParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ReactionSchemaParser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Synthesize.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Synthesize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SynthesisTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/SynthesisTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/HydrohalogenationReaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/HydrohalogenationReaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,28 +25,28 @@
     <session id="978342370">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="env" value="9" />
+          <entry key="env" value="10" />
           <entry key="gitignore" value="4" />
-          <entry key="js" value="109" />
+          <entry key="js" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="109" />
-          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="JavaScript" value="110" />
+          <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="env" value="73" />
+          <entry key="env" value="82" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="9330" />
+          <entry key="js" value="9640" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="9330" />
-          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="JavaScript" value="9640" />
+          <entry key="PLAIN_TEXT" value="92" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -67,20 +72,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+        <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="220" column="55" selection-start-line="220" selection-start-column="55" selection-end-line="220" selection-end-column="55" />
+            <state relative-caret-position="64">
+              <caret line="231" column="56" selection-start-line="231" selection-start-column="56" selection-end-line="231" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -96,7 +92,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>oxym</find>
       <find>pina</find>
       <find>pinacol</find>
       <find>Ritte</find>
@@ -126,6 +121,7 @@
       <find>akyl halide</find>
       <find>alcohol</find>
       <find>Rules foun</find>
+      <find>MoleculeLookup(</find>
     </findStrings>
     <replaceStrings>
       <replace>AcidCatalyzedRingOpening</replace>
@@ -151,18 +147,18 @@
         <option value="$PROJECT_DIR$/lib/FunctionalGroups.js" />
         <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" />
-        <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" />
         <option value="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" />
         <option value="$PROJECT_DIR$/test/ReactionsTest.js" />
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
         <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
         <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
       </list>
     </option>
   </component>
@@ -294,12 +290,12 @@
       <workItem from="1580522537479" duration="126000" />
       <workItem from="1580966212155" duration="513000" />
       <workItem from="1580970395635" duration="58000" />
-      <workItem from="1581187173588" duration="931000" />
+      <workItem from="1581187173588" duration="2495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52709000" />
+    <option name="totallyTimeSpent" value="54273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
@@ -411,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="88" column="24" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/reactions/Oxymercuration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -523,10 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        <state relative-caret-position="3390">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
         </state>
       </provider>
     </entry>
@@ -537,10 +526,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="220" column="55" selection-start-line="220" selection-start-column="55" selection-end-line="220" selection-end-column="55" />
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="231" column="56" selection-start-line="231" selection-start-column="56" selection-end-line="231" selection-end-column="56" />
         </state>
       </provider>
     </entry>
