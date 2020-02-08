@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chemcalculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/chemcalculator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CanonicalSMILESParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSMILESParser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CanonicalSmilesParserv2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/PubChemLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PubChemLookup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ReactionSchemaParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ReactionSchemaParser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Synthesize.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Synthesize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/MoleculeLookup.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/MoleculeLookup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/HydrohalogenationReaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/HydrohalogenationReaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MoleculeLookupTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/MoleculeLookupTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,33 +18,33 @@
     <session id="978342370">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="env" value="10" />
+          <entry key="env" value="12" />
           <entry key="gitignore" value="4" />
-          <entry key="js" value="110" />
+          <entry key="js" value="117" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="110" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="JavaScript" value="117" />
+          <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="env" value="82" />
+          <entry key="env" value="100" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="9640" />
+          <entry key="js" value="9791" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="9640" />
-          <entry key="PLAIN_TEXT" value="92" />
+          <entry key="JavaScript" value="9791" />
+          <entry key="PLAIN_TEXT" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="39" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="7" />
           <entry key="project.open.time.11" value="3" />
@@ -63,20 +56,70 @@
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="39" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="231" column="56" selection-start-line="231" selection-start-column="56" selection-end-line="231" selection-end-column="56" />
+            <state relative-caret-position="-1891">
+              <caret column="5" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/CanonicalSMILESParserTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="185" column="68" selection-start-line="185" selection-start-column="41" selection-end-line="185" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/MoleculeLookupTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/VerifyHydrohalogenationReaction.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4635">
+              <caret line="309" column="62" selection-start-line="309" selection-start-column="62" selection-end-line="309" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -92,7 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pina</find>
       <find>pinacol</find>
       <find>Ritte</find>
       <find>ritterReactionReverse</find>
@@ -122,6 +164,7 @@
       <find>alcohol</find>
       <find>Rules foun</find>
       <find>MoleculeLookup(</find>
+      <find>CarboxylicAcidToKetone reve</find>
     </findStrings>
     <replaceStrings>
       <replace>AcidCatalyzedRingOpening</replace>
@@ -145,7 +188,6 @@
         <option value="$PROJECT_DIR$/lib/Synthesize.js" />
         <option value="$PROJECT_DIR$/test/CanonicalSMILESParserTest.js" />
         <option value="$PROJECT_DIR$/lib/FunctionalGroups.js" />
-        <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
         <option value="$PROJECT_DIR$/lib/reactions/Oxymercuration.js" />
         <option value="$PROJECT_DIR$/lib/reactions/ReductiveAmination.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AcidCatalyzedRingOpening.js" />
@@ -155,10 +197,12 @@
         <option value="$PROJECT_DIR$/lib/reactions/AkylHalideDehydration.js" />
         <option value="$PROJECT_DIR$/lib/reactions/AlcoholDehydration.js" />
         <option value="$PROJECT_DIR$/lib/FindSubstrates.js" />
-        <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
-        <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/lib/PubChemLookup.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/lib/MoleculeLookup.js" />
+        <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
+        <option value="$PROJECT_DIR$/test/SynthesisTest.js" />
+        <option value="$PROJECT_DIR$/test/MoleculeLookupTest.js" />
       </list>
     </option>
   </component>
@@ -290,18 +334,19 @@
       <workItem from="1580522537479" duration="126000" />
       <workItem from="1580966212155" duration="513000" />
       <workItem from="1580970395635" duration="58000" />
-      <workItem from="1581187173588" duration="2495000" />
+      <workItem from="1581187173588" duration="3869000" />
+      <workItem from="1581196000630" duration="475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54273000" />
+    <option name="totallyTimeSpent" value="56122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22455573" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22778675" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -372,13 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CanonicalSMILESParserTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="192" column="13" lean-forward="true" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/FunctionalGroups.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
@@ -390,13 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -446,13 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -512,31 +536,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        <state relative-caret-position="154">
+          <caret line="237" column="21" lean-forward="true" selection-start-line="237" selection-start-column="21" selection-end-line="237" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
+    <entry file="file://$PROJECT_DIR$/test/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/MoleculeLookup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4635">
+          <caret line="309" column="62" selection-start-line="309" selection-start-column="62" selection-end-line="309" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/PubChemLookup.js">
+    <entry file="file://$PROJECT_DIR$/test/VerifyHydrohalogenationReaction.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="231" column="56" selection-start-line="231" selection-start-column="56" selection-end-line="231" selection-end-column="56" />
+        <state relative-caret-position="-1891">
+          <caret column="5" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CanonicalSMILESParserTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="185" column="68" selection-start-line="185" selection-start-column="41" selection-end-line="185" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/MoleculeLookupTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>

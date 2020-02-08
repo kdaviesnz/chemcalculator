@@ -1,3 +1,4 @@
+require("dotenv").config()
 const should = require('should');
 const MoleculeLookup = require('../lib/MoleculeLookup')
 
@@ -7,7 +8,7 @@ const MoleculeLookupTest = () => {
     const MongoClient = require('mongodb').MongoClient
     const S = require('string');
 
-    MongoClient.connect('mongodb+srv://kevin:77777!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
+    MongoClient.connect('mongodb+srv://kevin:!@cluster0-awqh6.mongodb.net', {useNewUrlParser: true},
         function (err, client) {
 
             if (err) {
@@ -23,6 +24,29 @@ const MoleculeLookupTest = () => {
             //const search = "CC(=O)CC1=CC2=C(C=C1)OCO2"
             // const search = "CC(=O)CC1=CC2=C(C=C1)OCO2"
             const search = "O(CO)(CC1=CC2=C(C=C1)OCO2)(C).*" // isosafrole glcol
+
+            if (true) {
+
+                console.log("Looking up O(C(=O)CC1=CC2=C(C=C1)OCO2)C(=O)CC1=CC2=C(C=C1)OCO2 ")
+                MoleculeLookup(db, "O(C(=O)CC1=CC2=C(C=C1)OCO2)C(=O)CC1=CC2=C(C=C1)OCO2", "SMILES", true).then(
+                    (mol) => {
+                        console.log(mol)
+                        if (typeof mol === "object") {
+                            mol.map(
+                                (molecule) => {
+                                    console.log('Processed ')
+                                    console.log(molecule.IUPACName)
+                                }
+                            )
+
+                        } else {
+                            console.log('Processed ')
+                            console.log(mol.IUPACName)
+                        }
+                    }
+                )
+
+            }
 
             if (false) {
                 MoleculeLookup(db, "methamphetamine", "name", true).then(
@@ -43,7 +67,7 @@ const MoleculeLookupTest = () => {
                 )
             }
 
-            if (true) {
+            if (false) {
 
                 console.log("Looking up CN.* ")
                 MoleculeLookup(db, "CN.*", "SMILES", true).then(
