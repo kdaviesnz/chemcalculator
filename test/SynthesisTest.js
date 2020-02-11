@@ -10,7 +10,7 @@ const SynthesizeTest = () => {
 // Methyl piperonyl ketone
     // propylene glycol 1,2-propanediol CC(CO)O
     // isosafrole glycole
-    const search = "methyl piperonyl ketone"
+    const search = "2-(1,3-benzodioxol-5-yl)acetic acid"
 
     const render = (rule, molecule_JSON_object,substrate_JSON_object, reagents, child_reaction_as_string, debug )=>{
 
