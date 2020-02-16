@@ -6,6 +6,7 @@ const AtomsFactory = require("../lib/factories/AtomsFactory")
 
 // acetone
 atoms = AtomsFactory("CC(=O)C");
+console.log(atoms)
 console.log(atoms[0])
 
 // mdma

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a2484a-23d2-407a-a978-54e41dd3cce8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/factories/AtomsFactory.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/factories/AtomsFactory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AtomsFactoryTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/AtomsFactoryTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,35 +19,35 @@
         <counts>
           <entry key="env" value="14" />
           <entry key="gitignore" value="4" />
-          <entry key="js" value="121" />
+          <entry key="js" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="121" />
+          <entry key="JavaScript" value="124" />
           <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="env" value="147" />
+          <entry key="env" value="154" />
           <entry key="gitignore" value="10" />
-          <entry key="js" value="10567" />
+          <entry key="js" value="10646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="10567" />
-          <entry key="PLAIN_TEXT" value="157" />
+          <entry key="JavaScript" value="10646" />
+          <entry key="PLAIN_TEXT" value="164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="44" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="3" />
-          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.12" value="5" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -54,8 +56,8 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="7" />
-          <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.open.time.9" value="9" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
     </session>
@@ -63,46 +65,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/SynthesisTest.js">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="55" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="15">
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/AtomsFactoryTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/lib/factories/AtomsFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/FetchReactions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/FunctionalGroups.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+            <state relative-caret-position="-221">
+              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -118,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Ritte</find>
       <find>ritterReactionReverse</find>
       <find>reductiveAminationReverse</find>
       <find>!@cluster0</find>
@@ -148,6 +134,7 @@
       <find>MoleculeLookup(</find>
       <find>CarboxylicAcidToKetone reve</find>
       <find>glycol</find>
+      <find>error gettng</find>
     </findStrings>
     <replaceStrings>
       <replace>AcidCatalyzedRingOpening</replace>
@@ -186,6 +173,8 @@
         <option value="$PROJECT_DIR$/lib/FetchReactions.js" />
         <option value="$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/test/AtomsFactoryTest.js" />
+        <option value="$PROJECT_DIR$/lib/factories/AtomsFactory.js" />
       </list>
     </option>
   </component>
@@ -231,7 +220,12 @@
               <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="reactions" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chemcalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chemcalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,18 +318,20 @@
       <workItem from="1581740415911" duration="2020000" />
       <workItem from="1581744467237" duration="74000" />
       <workItem from="1581746260039" duration="311000" />
-      <workItem from="1581750124291" duration="435000" />
+      <workItem from="1581750124291" duration="469000" />
+      <workItem from="1581817984462" duration="422000" />
+      <workItem from="1581834536376" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59741000" />
+    <option name="totallyTimeSpent" value="60457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24474959" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25282714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -348,7 +344,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5640625" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4609375" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -556,6 +552,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/FetchReactions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -565,22 +568,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/FunctionalGroups.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/reactions/CarboxylicAcidToKetone.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="-159">
+          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/AtomsFactoryTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/factories/AtomsFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
